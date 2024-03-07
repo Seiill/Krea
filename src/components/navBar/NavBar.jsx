@@ -49,7 +49,7 @@ const Navbar = ({ toggle }) => {
               ))}
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to="/contact" className={$scrollNav ? 'scrolled' : ''}>
+              <NavBtnLink to="/contactUs" className={$scrollNav ? 'scrolled' : ''}>
                 Contácto
               </NavBtnLink>
             </NavBtn>

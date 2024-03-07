@@ -40,6 +40,7 @@ align-items: center;
 `
 export const TextContainer = styled.div`
 display: inline-block;
+font-family: 'DINAlternate';
 `
 const cursorAnimation = keyframes`
   50% {
@@ -52,6 +53,7 @@ const typingAnimation = keyframes`
   }
 `;
 export const TitleFirst = styled.h2`
+
   letter-spacing: 10px;
   border-right: 5px solid;
   width: 100%;
@@ -62,6 +64,19 @@ export const TitleFirst = styled.h2`
     ${cursorAnimation} .4s step-end infinite alternate;
 `;
 export const Title = styled.h2`
+font-family: 'DINAlternate';
+
+`
+export const Titles = styled.h2`
+font-family: 'DINAlternate';
+font-size: ${variables.bigFont};
+text-align: center;
+
+`
+export const SectionContainer = styled.article`
+display: flex; 
+flex-direction: column;
+
 `
 export const Image = styled.img`
 width: 100%;
@@ -96,6 +111,7 @@ overflow: hidden;
 `
 export const ValorSection = styled.section`
   display: grid;
+  align-content: space-between;
   justify-content: center;
   align-items: center;
   grid-template-columns: repeat(
@@ -112,7 +128,7 @@ export const ValorCard = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
-
+justify-content: space-between
   width: 90%;
   max-height: 600px;
   min-height: 300px;
@@ -124,5 +140,6 @@ align-items: center;
 `;
 
 export const IconContainer = styled.div`
-  width: 100%;
+  font-size: 2.5rem;
+  color:${variables.hoverSecondaryDarkColor}
 `;

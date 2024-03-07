@@ -1,25 +1,51 @@
 import React from 'react';
-import { SidebarContainer, Icon, CloseIcon, SidebarMenu, SidebarWrapper, SidebarLink, SideBtnWrap, SidebarRoute, Links } from './SideBarElements';
-import { navItems,} from '../../data';
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
-const Sidebar = ({ $isOpen, toggle }) => {
+const SidebarContainer = styled.div`
+  width: 250px;
+  height: 100%;
+  background-color: #2C2A4A;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  transition: left 0.3s ease;
+`;
+
+const SidebarMenu = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+const SidebarItem = styled.li`
+  padding: 1rem;
+`;
+
+const SidebarLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+`;
+
+const Sidebar = ({ isOpen, toggle }) => {
   return (
-    <SidebarContainer isOpen={$isOpen} onClick={toggle}>
-      <Icon onClick={toggle}>
-        <CloseIcon />
-      </Icon>
-      <SidebarWrapper>
-        <SidebarMenu>
-          {navItems.map((item) => (
-            <SidebarLink key={item.id} onClick={toggle}>
-              <Links to={item.path}>{item.title}</Links>
-            </SidebarLink>
-          ))}
-        </SidebarMenu>
-        <SideBtnWrap>
-          <SidebarRoute to='/contactus'> Contact us</SidebarRoute>
-        </SideBtnWrap>
-      </SidebarWrapper>
+    <SidebarContainer isOpen={isOpen}>
+      <SidebarMenu>
+        <SidebarItem>
+          <SidebarLink to="/" onClick={toggle}>Home</SidebarLink>
+        </SidebarItem>
+        <SidebarItem>
+          <SidebarLink to="/services" onClick={toggle}>Services</SidebarLink>
+        </SidebarItem>
+        <SidebarItem>
+          <SidebarLink to="/aboutUs" onClick={toggle}>About Us</SidebarLink>
+        </SidebarItem>
+        <SidebarItem>
+          <SidebarLink to="/contactUs" onClick={toggle}>Contact Us</SidebarLink>
+        </SidebarItem>
+        {/* Add more sidebar items as needed */}
+      </SidebarMenu>
     </SidebarContainer>
   );
 };

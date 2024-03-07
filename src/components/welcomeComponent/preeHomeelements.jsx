@@ -64,6 +64,7 @@ export const DivTextStyled = styled.div`
 `;
 export const Span =styled.span`
 font-size: ${({ fontSize }) => fontSize || '2rem'};
+font-family: ${props => props.fontFamily};
 font-weight: bold;
 letter-spacing: ${({ letterSpacing }) => letterSpacing || '0'};
 color: ${({ $textShadow }) => ($textShadow ? variables.bgColor : variables.hoverPrimaryDarkColor)};
@@ -77,6 +78,7 @@ export const textShadowStyles = `
 `;
 export const Wiggle = styled.span`
 color:${variables.hoverPrimaryDarkColor};
+font-family: ${props => props.fontFamily};
 font-size: 5.3rem;
 font-weight: 900;
 display: inline-block; 

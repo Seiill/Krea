@@ -5,7 +5,7 @@ const SwitchContainer = styled.div`
 left: 50%;
     position: absolute;
     transform: translate(-50%, -8%);
-    bottom: 14%;
+    bottom: 19%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +20,7 @@ const SwitchInput = styled.input`
 `;
 
 const SwitchLabel = styled.label`
-  margin: auto;
+  margin: auto auto 22px auto;
   display: block;
   position: relative;
   background: ${(props) => (props.checked ? '#20a0ff' : '#d2d9e4')};

@@ -64,14 +64,14 @@ const PreHome = () => {
   return (
     <Container>
       <DivTextStyled $scrolled={scrolled} $scrollDirection={scrollDirection} $hasScrolled={hasScrolled}>
-        <Span fontSize="2.5rem" letterSpacing="3.1px">
+        <Span fontSize="2.5rem" fontFamily = 'DINAlternate'letterSpacing="5.1px">
           TRABAJAMOS JUNTOS
         </Span>
-        <Span fontSize="3.5rem" letterSpacing="7px" $textShadow="-2px -2px 0 #0F2633, 2px -2px 0 #0F2633, -2px 2px 0 #0F2633, 2px 2px 0 #0F2633">
+        <Span fontFamily='DINAlternate' fontSize="3.5rem" letterSpacing="8.2px" $textShadow="-2px -2px 0 #0F2633, 2px -2px 0 #0F2633, -2px 2px 0 #0F2633, 2px 2px 0 #0F2633">
           PARA HACERTE
         </Span>
-        <Wiggle>VISIBLE</Wiggle>
-        <Span fontSize="2.5rem" letterSpacing="2.7px" $textShadow="-2px -2px 0 #0F2633, 2px -2px 0 #0F2633, -2px 2px 0 #0F2633, 2px 2px 0 #0F2633">
+        <Wiggle fontFamily='DINAlternate'>VISIBLE</Wiggle>
+        <Span fontFamily='DINAlternate' fontSize="2.5rem" letterSpacing="3.9px" $textShadow="-2px -2px 0 #0F2633, 2px -2px 0 #0F2633, -2px 2px 0 #0F2633, 2px 2px 0 #0F2633">
           EN EL MUNDO DIGITAL
         </Span>
       </DivTextStyled>

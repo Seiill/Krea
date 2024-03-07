@@ -5,7 +5,7 @@ const Lightbulb = () => {
     const [isSwitchOn, setSwitchOn] = useState(false);
   return (
     <Container>
-      <TitleHeader>¡En nuestra agencia de diseño, la clave es tu visión! Nuestro enfoque se basa en cuatro pasos fundamentales</TitleHeader>
+      <TitleHeader>¡En nuestra agencia de diseño, la clave es tu visión! Nuestro enfoque se basa en cuatro pasos fundamentales:</TitleHeader>
     <GridContainer>
       
     <LeftColumn>

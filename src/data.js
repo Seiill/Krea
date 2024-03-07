@@ -1,135 +1,162 @@
-export const questions =[
+export const questions = [
   {
     "id": "00001",
     "text": "¿Tienes una marca definida?",
-    "options": ["Sí", "No", "No estoy seguro"]
+    "options": ["Sí", "No", "No estoy seguro"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00002",
-    "text": "¿Qué tienes como marca? Selecciona las opciones que identifiquen la marca que tienes. (si tu respuesta es No tengo marca, pasa al bloque 2 Cliente)",
-    "options": ["Nombre", "Concepto", "Logo", "Color", "No tengo marca"]
+    "text": "¿Qué tienes como marca?",
+    "options": ["Nombre", "Concepto", "Logo", "Color", "No tengo marca"],
+    "errorMessage": "Por favor, selecciona al menos una opción."
   },
   {
     "id":"00003",
     "text": "¿Tu marca es única y diferenciable?",
-    "options": ["Sí", "No", "No estoy seguro"]
+    "options": ["Sí", "No", "No estoy seguro"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00004",
     "text": "¿Tu logo es sencillo y reconocible?",
-    "options": ["Sí", "No", "No estoy seguro"]
+    "options": ["Sí", "No", "No estoy seguro"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00005",
     "text": "¿Conoces clientes que hayan llegado a ti porque reconocieron tu logo?",
-    "options": ["Sí", "No", "No sé"]
+    "options": ["Sí", "No", "No sé"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00006",
     "text": "¿Entiendes la importancia de construir una marca diferenciable?",
-    "options": ["Sí", "No", "No del todo"]
+    "options": ["Sí", "No", "No del todo"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00007",
     "text": "¿Estarías dispuesto a modificar tu logo?",
-    "options": ["Sí", "No", "No del todo"]
+    "options": ["Sí", "No", "No del todo"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00008",
     "text": "¿Sabes quién es tu cliente?",
-    "options": ["Sí", "No", "No estoy seguro"]
+    "options": ["Sí", "No", "No estoy seguro"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00009",
     "text": "¿Sabes qué hace, dónde vive, cuántos años tiene tu cliente?",
-    "options": ["Sí", "No", "No estoy seguro"]
+    "options": ["Sí", "No", "No estoy seguro"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00010",
     "text": "¿Sabes lo que ve y escucha tu cliente?",
-    "options": ["Sí", "No", "No estoy seguro"]
+    "options": ["Sí", "No", "No estoy seguro"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00011",
     "text": "¿Cuál es la necesidad que tu cliente quiere llenar al comprarte?",
-    "options": []
+    "options": [],
+    "errorMessage": "Por favor, proporciona una respuesta."
   },
   {
     "id": "00012",
-    "text": "¿Tienes una web? (si tu respuesta es No, pasa al bloque 4 Redes sociales)",
-    "options": ["Sí", "No"]
+    "text": "¿Tienes una web?",
+    "options": ["Sí", "No"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00013",
     "text": "¿Tu web es fácil de navegar?",
-    "options": ["Sí", "No", "No estoy seguro"]
+    "options": ["Sí", "No", "No estoy seguro"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00014",
     "text": "¿Tu web explica claramente qué haces y por qué?",
-    "options": ["Sí", "No", "No estoy seguro"]
+    "options": ["Sí", "No", "No estoy seguro"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00015",
     "text": "¿Tu web está diseñada de acuerdo al objetivo de tu negocio?",
-    "options": ["Sí", "No", "No estoy seguro"]
+    "options": ["Sí", "No", "No estoy seguro"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00016",
     "text": "¿Tu web habla el lenguaje de los clientes que te compran?",
-    "options": ["Sí", "No", "No estoy seguro"]
+    "options": ["Sí", "No", "No estoy seguro"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00017",
-    "text": "¿Tienes presencia en redes sociales? (si tu respuesta es No, pasa al bloque 5 Publicidad Online)",
-    "options": ["Sí", "No"]
+    "text": "¿Tienes presencia en redes sociales?",
+    "options": ["Sí", "No"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00018",
     "text": "¿Tus redes sociales tienen una estrategia definida?",
-    "options": ["Sí", "No", "No sé"]
+    "options": ["Sí", "No", "No sé"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00019",
     "text": "¿Monetizas con tus redes sociales?",
-    "options": ["Sí", "No"]
+    "options": ["Sí", "No"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00020",
-    "text": "¿Has hecho campañas de publicidad online? (si tu respuesta es No, pasa al bloque 6 Embudo de ventas)",
-    "options": ["Sí", "No"]
+    "text": "¿Has hecho campañas de publicidad online?",
+    "options": ["Sí", "No"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00021",
     "text": "¿Tus campañas de publicidad online han funcionado?",
-    "options": ["Sí", "No", "No estoy seguro"]
+    "options": ["Sí", "No", "No estoy seguro"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00022",
-    "text": "¿Tienes un embudo de ventas? (si tu respuesta es No, pasa al bloque 7 Experiencia con agencias de marketing)",
-    "options": ["Sí", "No"]
+    "text": "¿Tienes un embudo de ventas?",
+    "options": ["Sí", "No"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00023",
     "text": "¿Tu embudo de ventas te ayuda a cerrar ventas?",
-    "options": ["Sí", "No", "En muy pocos casos"]
+    "options": ["Sí", "No", "En muy pocos casos"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00024",
     "text": "¿Has trabajado con alguna agencia de marketing digital?",
-    "options": ["Sí", "No"]
+    "options": ["Sí", "No"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00025",
     "text": "¿Tu experiencia con agencias de marketing digital ha sido positiva?",
-    "options": ["Sí", "No", "No del todo"]
+    "options": ["Sí", "No", "No del todo"],
+    "errorMessage": "Por favor, selecciona una opción."
   },
   {
     "id": "00026",
-    "text": "Si tienes redes sociales y/o pagina web nos gustaría conocerlas así que te invitamos a que nos dejes tus redes sociales y/o pagina web en este formulario.",
-    "options": ["","","",]
+    "text": "Si tienes redes sociales y/o página web nos gustaría conocerlas así que te invitamos a que nos dejes tus redes sociales y/o página web en este formulario.",
+    "options": [],
+    "errorMessage": "Por favor, completa este campo si tienes redes sociales o una página web."
   }
 ];
+
 export const cardsData = [
     { id:'001',
     title: 'Escuchar',
@@ -153,40 +180,42 @@ export const cardsData = [
     encendida: true,
     text:'texto t3' },
   ];
-  export const valorData =[
+  export const 
+  valorData =[
         {
       id:"0001",
       title:"Conexión",
       description:"Trabajamos en equipo contigo para crear soluciones efectivas.",
-      icon:"name",
+      icon:"GrConnect",
       alt:"alt"
     },
     {
       id:"0002",
       title:"Integridad",
       description:"Somos fieles a nuestros valores y principios.",
-      icon:"name",
+      icon:"GiHolyGrail",
       alt:"alt"
     },
     {
       id:"0003",
       title:"Colaboración",
       description:"Compartimos nuestros conocimientos y experiencias para crear soluciones innovadoras. ",
-      icon:"name",
+      icon:"GiThreeFriends",
       alt:"alt"
     },
     {
       id:"0004",
       title:"Altruismo",
       description:"Creemos que todos tenemos un papel que desempeñar para hacer del mundo un lugar mejor.",
-      icon:"name",
+      icon:"FaHeartbeat",
       alt:"alt"
     },
   ]
   export const infography =[
-    {id:"inf-1",title:"", icon:'icon1'},
-    {id:"inf-2",title:"", icon:'icon2'},
-    {id:"inf-3",title:"", icon:'icon3'},
+    {id:"inf-1",title:"Diseño Web", icon:'icon1',pdfName: 'diseño-web.pdf',},
+    {id:"inf-2",title:"Identidad Visual", icon:'icon2', pdfName: 'imagen-corporativa.pdf',},
+    {id:"inf-3",title:"Redes Sociales", icon:'icon3',pdfName: 'rrss-sociales.pdf'},
+    
   ];
   export const caseProud=[
     {id:"0001",

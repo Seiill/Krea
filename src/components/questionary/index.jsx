@@ -1,18 +1,58 @@
 import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
-import { Question, Button, Container, Label, Form, Response, Span, Input, ButtonContainer, ErrorMessage } from './elementsQuestionnari'; // Asegúrate de importar ErrorMessage
-
 import { questions } from '../../data';
+import Toast from '../Styled-Components/toast';
+import { IoIosSend } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
+
+import { 
+  Question,
+  Button,
+  Container,
+  Label,
+  Form, 
+  Response, 
+  ContactContainer, 
+  InputContainer,
+  Span, 
+  Input, 
+  TextArea, 
+  ButtonContainer, 
+  ErrorMessage 
+} from './elementsQuestionnari';
 
 const QuestionnaireForm = () => {
-  const { control, handleSubmit, setValue, getValues, formState: { errors } } = useForm();
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const { control, handleSubmit, setValue, getValues, formState: { errors }, register, reset } = useForm();
+  const [toastVisible, setToastVisible] = useState(false);
+  const [toastMessage, setToastMessage] = useState('');
+  const [responses, setResponses] = useState({});
+  const [showContactForm, setShowContactForm] = useState(false);
+const navigate = useNavigate();
+  const showToast = (message) => {
+    setToastMessage(message);
+    setToastVisible(true);
+  };
+
+  const hideToast = () => {
+    setToastVisible(false);
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const validateAnswer = (questionIndex) => {
     const answer = getValues(`question${questions[questionIndex].id}`);
-    console.log('Answer for question', questionIndex, ':', answer);
+    const isValid = answer !== undefined && answer !== '' && answer !== null;
 
-    return answer !== undefined && answer !== '' && answer !== null;
+    if (!isValid) {
+      showToast('Por favor, selecciona una respuesta antes de continuar.');
+      return false;
+    }
+
+    return true;
   };
 
   const handleQuestionChange = (currentIndex, direction) => {
@@ -27,8 +67,65 @@ const QuestionnaireForm = () => {
     }
   };
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      if (!data.name.trim()) { 
+        showToast('Por favor, ingresa tu nombre.');
+        return;
+      }
+    
+      if (!validateEmail(data.email)) { 
+        showToast('Por favor, ingresa un correo electrónico válido.');
+        return;
+      }
+  
+      console.log(data);
+  
+      showToast('¡Formulario enviado con éxito!');
+  
+      // Restablecer el estado del formulario
+      reset();
+      // Cerrar el div que contiene los datos de contacto
+      setShowContactForm(false);
+      setCurrentQuestion(0);
+  
+      navigate('/services');
+    } catch (error) {
+      showToast(error.message);
+    }
+  };
+
+  const handleNext = () => {
+    if (!validateAnswer(currentQuestion)) {
+      return;
+    }
+  
+    const currentResponse = getValues(`question${questions[currentQuestion].id}`);
+    setResponses({ ...responses, [`question${questions[currentQuestion].id}`]: currentResponse });
+  
+    if (currentQuestion === questions.length - 1) {
+      setShowContactForm(true);
+    } else if (currentQuestion === 1 && currentResponse === "No tengo marca") {
+      setCurrentQuestion(7); 
+    } else if (currentQuestion === 11 && currentResponse === "No") {
+      setCurrentQuestion(16); 
+    } else if (currentQuestion === 16 && currentResponse === "No") {
+      setCurrentQuestion(19); 
+    } else if (currentQuestion === 19 && currentResponse === "No") {
+      setCurrentQuestion(21);
+    } else if (currentQuestion === 21 && currentResponse === "No") {
+      setCurrentQuestion(23);
+    } else if (currentQuestion === 23 && currentResponse === "No") {
+      setCurrentQuestion(25);
+    } else {
+      handleQuestionChange(currentQuestion, 'next');
+      hideToast();
+    }
+  };
+
+  const handlePrevious = () => {
+    handleQuestionChange(currentQuestion, 'prev');
+    hideToast();
   };
 
   return (
@@ -39,56 +136,83 @@ const QuestionnaireForm = () => {
             <Question>
               <Span>{question.text}</Span>
               <Response>
-                {question.options.map((option, optionIndex) => (
-                  <Label key={`option-${question.id}-${optionIndex}`} htmlFor={`question${question.id}-${optionIndex}`}>
-                    <Controller
-                      name={`question${question.id}`}
-                      control={control}
-                      render={({ field }) => (
-                        <>
-                          <Input
-                            type="radio"
-                            {...field}
-                            id={`question${question.id}-${optionIndex}`}
-                            value={option}
-                            checked={field.value === option}
-                            onChange={() => setValue(`question${question.id}`, option)}
-                          />
-                          {option}
-                        </>
-                      )}
-                    />
-                  </Label>
-                ))}
+                {question.options.length > 0 ? (
+                  question.options.map((option, optionIndex) => (
+                    <Label key={`option-${question.id}-${optionIndex}`} htmlFor={`question${question.id}-${optionIndex}`}>
+                      <Controller
+                        name={`question${question.id}`}
+                        control={control}
+                        render={({ field }) => (
+                          <>
+                            <Input
+                              type="radio"
+                              {...field}
+                              id={`question${question.id}-${optionIndex}`}
+                              value={option}
+                              checked={field.value === option}
+                              onChange={() => setValue(`question${question.id}`, option)}
+                            />
+                            {option}
+                          </>
+                        )}
+                      />
+                    </Label>
+                  ))
+                ) : (
+                  <Controller
+                    name={`question${question.id}`}
+                    control={control}
+                    render={({ field }) => (
+                      <TextArea
+                        {...field}
+                        id={`question${question.id}`}
+                        placeholder="Escribe tu respuesta aquí..."
+                        onChange={(e) => setValue(`question${question.id}`, e.target.value)}
+                      />
+                    )}
+                  />
+                )}
               </Response>
               <ButtonContainer>
                 <Button
                   type="button"
-                  onClick={() => handleQuestionChange(index, 'prev')}
+                  onClick={handlePrevious}
                   style={{ display: index === currentQuestion && index > 0 ? 'block' : 'none' }}
                 >
                   Anterior
                 </Button>
                 <Button
                   type="button"
-                  onClick={() => handleQuestionChange(index, 'next')}
-                  style={{ display: index === currentQuestion && index < questions.length - 1 ? 'block' : 'none' }}
+                  onClick={() => {
+                    if (index === currentQuestion && index < questions.length - 1) {
+                      handleNext();
+                    } else if (index === currentQuestion && index === questions.length - 1) {
+                      setShowContactForm(true);
+                    }
+                  }}
+                  style={{ display: 'block' }}
                 >
-                  Siguiente
+                  {index === questions.length - 1 ? 'Finalizar' : 'Siguiente'}
                 </Button>
-                {index === questions.length - 1 && (
-                  <Button type="submit" style={{ display: index === currentQuestion ? 'block' : 'none' }}>
-                    Enviar
-                  </Button>
-                )}
               </ButtonContainer>
             </Question>
             {errors[`question${question.id}`] && (
-              <ErrorMessage>Por favor, selecciona una respuesta antes de continuar.</ErrorMessage>
+              <ErrorMessage>{question.errorMessage}</ErrorMessage>
             )}
           </div>
         ))}
+        {showContactForm && (
+          <ContactContainer>
+            <h2>Deja tus datos para enviarte los resultados de este test</h2>
+            <InputContainer>
+              <Input {...register("name")} placeholder="Nombre" customWidth="40vw" />
+              <Input {...register("email")} placeholder="Correo electrónico" customWidth="40vw" />
+            </InputContainer>
+            <Button type="submit">Enviar <IoIosSend /></Button>
+          </ContactContainer>
+        )}
       </Form>
+      <Toast message={toastMessage} visible={toastVisible} onClose={hideToast} />
     </Container>
   );
 };

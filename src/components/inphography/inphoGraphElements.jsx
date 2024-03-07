@@ -1,12 +1,18 @@
 import styled from 'styled-components';
 import { mobile } from '../Styled-Components/Responsive';
+import { variables } from '../Styled-Components/themMode';
 export const Container = styled.div`
 position: relative;
 top: 0;
   display: flex;
   width: 100%;
-  height: 100;
-  
+  height: 100vh;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+`;
+export const Thumbnail = styled.div`
   
 `;
 
@@ -25,14 +31,40 @@ padding: 4rem 0;
 `;
 
 export const Title = styled.h2`
-  padding: 2.5rem 0;
-  font-size: 3rem;
+text-wrap: balance;
+text-align: center;
+width: 60%;
+padding: 1.2rem 0;
+color: ${variables.primaryColor};
 `;
+export const Description = styled.p`
+font-size: 1.2rem;
+font-weight: ${variables.mediumBoldFont};
+font-family: 'DINAlternate';
+color: ${variables.secondColor};
+text-align: center;
+`
 
 export const Image = styled.img`
-  width: 80%;
+border-radius: .7rem;
+  width: 100%;
   object-fit: cover;
   object-position: center;
+  transition: transform 0.3s ease; 
+  transform: scale(1);
+
+  &:hover {
+    transform: scale(1.2); 
+  }
+`;
+export const ImageContainer = styled.figure`
+padding: 1rem;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border: solid 2px ${variables.hoverPrimaryDarkColor};
+  border-radius: .8rem;
+  display: flex;
 
 `;
 export const Button = styled.button`

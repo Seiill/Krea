@@ -10,7 +10,7 @@ export const Nav = styled.nav`
   width: 100%;
   max-width: 1280px;
   top: 70px;
-  justify-content: space-between;
+  justify-content: space-around;
   z-index: 2;
   ${mobile({
     flexWrap: "wrap",
@@ -19,17 +19,21 @@ export const Nav = styled.nav`
 `;
 
 export const ButtonServices = styled.button`
-  width: 23%;
-  background-color: ${variables.primaryColor};
-  color: ${variables.bgColor};
-  border-radius: 0 0 10px 10px;
-  transition: background-color 0.3s, color 0.3s, border-radius 0.3s font-weight: 0.3s; 
+width: 23%;
+height: 2.5rem;
+font-family: 'DINAlternate';
+  background-color: ${variables.bgColor};
+  border: solid 1px ${variables.secondColor};
+  color: ${variables.primaryColor};
+  border-radius: 0 0 20px 20px;
+  transition: all 0.3s;
 
   &:hover {
     background-color: ${variables.hoverPrimaryLightColor};
-    color: ${variables.hoverPrimaryDarkColor};
-    border-radius: 0 0 20px 20px;
+    color: ${variables.bgColor};
     font-weight: ${variables.mediumBoldFont};
+    border: none;
+    transform: scale(1.05);
   }
   ${mobile({
     minWidth: "150px",
@@ -49,12 +53,14 @@ export const Aside = styled.aside`
 `;
 
 export const H1 = styled.h1`
+
 margin-top: 4rem;
 color: ${variables.hoverPrimaryDarkColor};
 `;
 
 export const H3 = styled.h3`
 color: ${variables.hoverPrimaryDarkColor};
+font-family: 'DINAlternate';
 `;
 
 export const H2 = styled.h2`

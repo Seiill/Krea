@@ -7,12 +7,12 @@ import prehomeImage from '../../assets/prehome image.svg';
 import estadisticImage from '../../assets/estadistic.svg';
 import selectedOptionImage from '../../assets/selectedOption.svg';
 import Navigation from './Navigation';
-import bsaBrand from '../../../public/images/bsa-brand.jpg'
-import bsaModel from '../../../public/images/bsa-models.jpg'
-import jedanBrand from '../../../public/images/jedan-brand.jpg'
-import jedanWeb from '../../../public/images/jedan-web.jpg'
-import sifBrand from '../../../public/images/sif-brand.jpg'
-import sifModel from '../../../public/images/sif-models.jpg'
+import bsaBrand from '../../assets/bsa-brand.jpg'
+import bsaModel from '../../assets/bsa-models.jpg'
+import jedanBrand from '../../assets/jedan-brand.jpg'
+import jedanWeb from '../../assets/jedan-web.jpg'
+import sifBrand from '../../assets/sif-brand.jpg'
+import sifModel from '../../assets/sif-models.jpg'
 const imageMap = {
   'bsa-brand': bsaBrand,
   'bsa-models': bsaModel,

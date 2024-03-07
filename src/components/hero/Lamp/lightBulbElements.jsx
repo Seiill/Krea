@@ -35,6 +35,7 @@ export const LeftColumn = styled.div`
 export const CenterColumn = styled.div`
   grid-area: center;
   align-self: center;
+  margin-bottom: 100px;
   ${mobile(
     {
       height: "350px",
@@ -58,7 +59,6 @@ export const BulbIcon = styled.div`
 
 export const RightColumn = styled.div`
   grid-area: right;
-  /* background-color: #e74c3c; */
   color: #fff;
   padding: 10px;
 `;
@@ -67,9 +67,11 @@ export const TextContainer = styled.div`
   padding: 1.5rem 0;
 `;
 export const Title = styled.h1`
-color: ${variables.secondColor}
+color: ${variables.secondColor};
+font-family: 'DINAlternate';
 `
 export const TitleHeader = styled.h2`
+
 position: relative;
 top: 8rem;
 color: ${variables.bgColor};
@@ -90,8 +92,8 @@ export const Blister = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background-color: ${(props) => (props.$isswitchon ? '#ccc' : '#FEEB3D')};
 `;
@@ -99,7 +101,7 @@ export const Blister = styled.div`
 export const Filament = styled.svg`
   position: absolute;
   width: 28%;
-  top: 95px;
+  top: 70px;
   left: 50%;
   transform: translate(-50%, -50%);
 
@@ -110,12 +112,13 @@ export const Filament = styled.svg`
 
 export const Vastago = styled.div`
 position: absolute;
-    left: 88px;
-    height: 132px;
-    width: 4px;
-    background-color: #000;
-    transform: skew(15deg, 0) scaleY(-1);
-    top: 90px;
+position: absolute;
+left: 67px;
+height: 110px;
+width: 4px;
+background-color: #000;
+transform: skew(15deg, 0) scaleY(-1);
+top: 73px;
 
   &::before {
     content: '';
@@ -137,7 +140,7 @@ position: absolute;
     background-color: #f7f6ed;
     left: 50%;
     transform: translate(-50%, -50%);
-    top: 142px;
+    top: 125px;
     z-index: -1;
     border-radius: 0 0 25px 25px;
 `

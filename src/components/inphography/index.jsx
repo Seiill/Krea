@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { infography } from '../../data';
-import { Container, Wrapper, Image } from './inphoGraphElements';
-import SlideButton from '../Styled-Components/SlideButton';
+import { Container, Wrapper, Image, ImageContainer,Thumbnail, Title, Description } from './inphoGraphElements'; 
+import Modal from './modal'
 import icon1 from '../../assets/Infografia-Diseño-Web.jpg';
 import icon2 from '../../assets/Infografia-Imagen-Corporativa.jpg';
 import icon3 from '../../assets/prehome image.svg';
-
+import diseñoWeb from '../../assets/pdf/diseño-web.pdf';
+import imagenCorp from '../../assets/pdf/imagen-corporativa.pdf';
+import rrssSociales from '../../assets/pdf/rrss-sociales.pdf'
 const getIconPath = (iconName) => {
   switch (iconName) {
     case 'icon1':
@@ -18,29 +20,48 @@ const getIconPath = (iconName) => {
       return '';
   }
 };
+const getPDFPath = (iconName) => {
+  switch (iconName) {
+    case 'icon1':
+      return diseñoWeb;
+    case 'icon2':
+      return imagenCorp;
+    case 'icon3':
+      return rrssSociales;
+    default:
+      return '';
+  }
+};
 
 const Infography = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentInfography, setCurrentInfography] = useState(null);
 
-  const goToPrevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? infography.length - 1 : prevIndex - 1));
+  const selectInfography = (index) => {
+    setCurrentInfography(infography[index]);
   };
 
-  const goToNextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === infography.length - 1 ? 0 : prevIndex + 1));
+  const closeInfography = () => {
+    setCurrentInfography(null);
   };
 
   return (
     <Container>
-      <SlideButton direction="prev" onClick={goToPrevSlide} />
+      <Title>Descubre nuestras infografías y visualiza el brillante horizonte para tu éxito empresarial. Juntos, construyamos el camino hacia el logro de tus metas.</Title>
+      <div style={{display:'flex'}}>
       {infography.map((item, index) => (
-        <Wrapper key={item.id} style={{ display: index === currentIndex ? 'flex' : 'none' }}>
-          <Image src={getIconPath(item.icon)} alt={item.title} />
-        </Wrapper>
+        <Thumbnail key={item.id} onClick={() => selectInfography(index)}>
+          <ImageContainer><Image src={getIconPath(item.icon)} alt={item.title} /></ImageContainer>
+          <Description>{item.title}</Description>
+        </Thumbnail>
       ))}
-      <SlideButton direction="next" onClick={goToNextSlide} />
+      </div>
+      {currentInfography && (
+              <Modal onClose={closeInfography} pdfUrl={getPDFPath(currentInfography.icon)} title={currentInfography.title} />
+     
+      )}
     </Container>
   );
 };
 
 export default Infography;
+
