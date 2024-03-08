@@ -57,6 +57,7 @@ const Container = styled.div`
 const FormContainer = styled.form`
   display: flex;
   width: 80%;
+  column-gap: 1rem;
 `;
 
 const LeftContainer = styled.div`
@@ -90,15 +91,19 @@ const InputField = styled.input`
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid ${variables.hoverPrimaryDarkColor};
   border-radius: 5px;
 `;
 
 const TextAreaField = styled.textarea`
-  width: 100%;
+width: 100%; 
+min-width: 100%;
+max-width: 100%;
+height: 100px;
+max-height: 300px; 
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid ${variables.hoverPrimaryDarkColor};
   border-radius: 5px;
 `;
 

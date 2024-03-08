@@ -16,7 +16,7 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-background-color: ${variables.hoverPrimaryDarkColor};
+background-image: linear-gradient(to top, #f9f9f9, #fafafa, #fafafa, #fbfbfb, #fbfbfb, #fbfbfb, #fcfcfc, #fcfcfc, #fdfdfd, #fefefe, #fefefe, #ffffff);
 opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
 transition: opacity 0.5s ease;
 margin-top: ${({ $isVisible }) => ($isVisible ? '0' : '-50vh')}; 

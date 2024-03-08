@@ -5,7 +5,7 @@ const SwitchContainer = styled.div`
 left: 50%;
     position: absolute;
     transform: translate(-50%, -8%);
-    bottom: 19%;
+    bottom: 11%;
     display: flex;
     align-items: center;
     justify-content: center;

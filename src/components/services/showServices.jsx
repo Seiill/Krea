@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShowContainer, ImageContainer,Content, ButtonContainer, Aside, H1, H3, H2, P, Img, IfContainer } from './navElements';
+import { ShowContainer, ImageContainer,Content, ButtonContainer,ViewFeatures, Aside, H1, H3, H2, P, Img, IfContainer } from './navElements';
 import image from '../../assets/selectedOption.svg';
 import SlideButton from '../Styled-Components/SlideButton';
 
@@ -74,6 +74,7 @@ const ShowServices = ({ selectedService,  onSelectService, servicesData}) => {
     <Aside>
       <H2>{title}</H2>
       <P>{description}</P>
+      <ViewFeatures>Ver Planes</ViewFeatures>
     </Aside>
     <ImageContainer>
     

@@ -23,14 +23,13 @@ width: 23%;
 height: 2.5rem;
 font-family: 'DINAlternate';
   background-color: ${variables.bgColor};
-  border: solid 1px ${variables.secondColor};
+  border: none;
   color: ${variables.primaryColor};
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 15px 15px;
   transition: all 0.3s;
 
   &:hover {
-    background-color: ${variables.hoverPrimaryLightColor};
-    color: ${variables.bgColor};
+    color: ${variables.secondColor};
     font-weight: ${variables.mediumBoldFont};
     border: none;
     transform: scale(1.05);
@@ -82,6 +81,27 @@ export const ImageContainer = styled.figure`
     height: 'auto',
   })}
 `;
+export const ViewFeatures = styled.button`
+width: fit-content;
+padding: 1rem 3rem; 
+background-color: ${variables.secondColor};
+border: none;
+text-align: center;
+color: ${variables.bgColor};
+font-weight: ${variables.boldFont};
+cursor: pointer;
+transition: all .3s ease-in-out;
+border-radius: 20px;
+&:focus {
+  outline: none;
+}
+&:active {
+  transform: scale(.9);
+}
+${H3}, &::after{
+  transition: inherit;
+}
+`
 
 export const Content = styled.div`
   width: 100%;
@@ -151,6 +171,15 @@ transition: all 0.3s ease-in-out;
   border-radius: 20px;
   text-decoration: none;
   font-weight: ${variables.boldFont};
+}
+&:focus {
+  outline: none;
+}
+&:active {
+  transform: scale(.9);
+}
+${H3}, &::after{
+  transition: inherit;
 }
 `
 export const UL = styled.ul`

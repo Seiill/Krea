@@ -16,7 +16,7 @@ export const GridContainer = styled.div`
     "left center right";
   height: 100%;
   align-items: stretch;
-  padding: 8rem;
+  padding: 2rem 8rem;
 
   ${mobile({
     gridTemplateAreas: "'center' 'left' 'right'",
@@ -65,6 +65,8 @@ export const RightColumn = styled.div`
 export const TextContainer = styled.div`
   margin: 0;
   padding: 1.5rem 0;
+  border-bottom: solid 2px ${variables.secondColor};
+  border-radius: 0 0 0 20px;
 `;
 export const Title = styled.h1`
 color: ${variables.secondColor};
@@ -73,8 +75,8 @@ font-family: 'DINAlternate';
 export const TitleHeader = styled.h2`
 
 position: relative;
-top: 8rem;
-color: ${variables.bgColor};
+top: 4rem;
+color: ${variables.hoverPrimaryDarkColor};
 width: 50%;
 text-align: center;
 margin: auto;
@@ -84,7 +86,8 @@ ${mobile({
 })}
 `
 export const Description = styled.p`
-
+color: ${variables.hoverPrimaryDarkColor};
+font-weight: ${variables.mediumBoldFont};
 `
 
 export const Blister = styled.div`
@@ -137,7 +140,7 @@ export const Cap = styled.div`
 position: absolute;
     width: 70px;
     height: 80px;
-    background-color: #f7f6ed;
+    background-color: #d9d8ce;
     left: 50%;
     transform: translate(-50%, -50%);
     top: 125px;

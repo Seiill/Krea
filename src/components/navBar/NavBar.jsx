@@ -1,9 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { IconContext } from 'react-icons/lib';
-import { FaBars } from 'react-icons/fa';
+import styled from 'styled-components';
+import { variables } from '../Styled-Components/themMode';
 import IconLogo from '../../assets/logoKrea.svg';
-import { Nav, NavbarContainer, Img, NavLogo, MobileIcon, NavMenu, NavLinks, NavIten, NavBtn, NavBtnLink } from './navbarelements';
+import { Nav, NavbarContainer, Img, NavLogo, MobileIcon, NavMenu, NavIten, NavLinks, NavBtn, NavBtnLink } from './navbarelements';
 import { navItems } from '../../data';
+import { FaBars } from 'react-icons/fa';
+
+const StyledFaBars = styled(FaBars)`
+  color: ${({ isOpen }) => (isOpen ? variables.primaryColor : variables.bgColor)};
+`;
 
 const Navbar = ({ toggle }) => {
   const [$scrollNav, setScrollNav] = useState(false);
@@ -37,7 +43,7 @@ const Navbar = ({ toggle }) => {
               <Img src={IconLogo} alt="Logo" />
             </NavLogo>
             <MobileIcon onClick={toggle}>
-              <FaBars />
+              <StyledFaBars isOpen={$scrollNav} />
             </MobileIcon>
             <NavMenu>
               {navItems.map((item) => (

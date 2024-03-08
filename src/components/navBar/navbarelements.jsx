@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
 import { variables } from '../Styled-Components/themMode';
+
 
 export const List = styled.li`
   height: 100%;

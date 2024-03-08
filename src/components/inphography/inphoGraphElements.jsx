@@ -13,7 +13,7 @@ top: 0;
   justify-content: center;
 `;
 export const Thumbnail = styled.div`
-  
+  cursor: pointer;
 `;
 
 export const Wrapper = styled.div`

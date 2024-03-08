@@ -118,7 +118,7 @@ export const ValorSection = styled.section`
     auto-fit,minmax(280px, 1fr));
   gap: 1rem;
   width: 100%; 
-  height: 100vh;
+  height: 100%;
   max-width: 1200px; 
   margin: 1rem auto; 
   padding: 1rem; 
