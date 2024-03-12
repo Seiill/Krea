@@ -59,7 +59,11 @@ color: ${variables.hoverPrimaryDarkColor};
 
 export const H3 = styled.h3`
 color: ${variables.hoverPrimaryDarkColor};
-font-family: 'DINAlternate';
+/* font-family: 'DINAlternate'; */
+position: absolute;
+    bottom: 100px;
+    right: 170px;
+    font-size: 1.2rem;
 `;
 
 export const H2 = styled.h2`
@@ -114,6 +118,7 @@ export const Content = styled.div`
 
 export const Img = styled.img`
   width: 100%;
+  max-height: 650px;
   object-fit: cover; 
 `;
 
@@ -193,7 +198,7 @@ export const Li = styled.li`
 `
 export const IfContainer = styled.section`
 position: relative;
-width: 80%;
+width: 100%;
+max-width: 1280px;
 margin: auto;
-padding: 2rem 0;
 `

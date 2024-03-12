@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ShowContainer, ImageContainer,Content, ButtonContainer,ViewFeatures, Aside, H1, H3, H2, P, Img, IfContainer } from './navElements';
-import image from '../../assets/selectedOption.svg';
+import image from '../../assets/services-selected-03.svg';
 import SlideButton from '../Styled-Components/SlideButton';
 
 import prehomeImage from '../../assets/prehome image.svg';
@@ -59,10 +59,10 @@ const ShowServices = ({ selectedService,  onSelectService, servicesData}) => {
   if (!selectedService) {
     return (
       <IfContainer>
-        <H1>Bienvenido</H1>
+        {/* <H1>Bienvenido</H1> */}
         <H3>Te invitamos a elegir el servicio que desees conocer</H3>
         <Img src={image} alt="Dibujo de niña seleccionando opciones de un menú" />
-        <Navigation services={servicesData} onSelectService={ onSelectService} />
+        {/* <Navigation services={servicesData} onSelectService={ onSelectService} /> */}
       </IfContainer>
     );
   }
