@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useForm, Controller } from 'react-hook-form';
-import Image from '../../assets/HomeIlustration.svg'
+import Image from '../../assets/contact-img.svg'
 import { variables } from '../Styled-Components/themMode';
 const ContactForm = () => {
   const { register, handleSubmit, control, formState: { errors } } = useForm();
