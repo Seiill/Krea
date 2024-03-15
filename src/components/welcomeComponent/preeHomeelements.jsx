@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { variables } from '../Styled-Components/themMode';
-import { mobile } from '../Styled-Components/Responsive';
+import { mobile, tablet } from '../Styled-Components/Responsive';
 const wiggleAnimation = keyframes`
   0%, 100% {
     opacity: 0;
@@ -28,9 +28,13 @@ height: 100vh;
 overflow: hidden;
 
 justify-content: space-between;
+${tablet({
+  flexDirection: "column",
+})}
 ${mobile({
   display: "none"
 })}
+
 `
 export const DivTextStyled = styled.div`
   position: relative;
@@ -46,6 +50,11 @@ export const DivTextStyled = styled.div`
   transform: translateY(${({ $scrolled, $scrollDirection }) =>
     $scrolled && $scrollDirection === 'down' ? '-100%' : '0'});
   transition: transform 0.5s ease, opacity 0.5s ease;
+  ${tablet({
+    width: "100%",
+    backgroundColor: `${variables.bgColor}`,
+    height: "50vh",
+  })}
 `;
 export const Span =styled.span`
 font-size: ${({ fontSize }) => fontSize || '2rem'};
@@ -95,4 +104,9 @@ display: flex;
   transform: translateY(${({ $scrolled, $scrollDirection }) =>
     $scrolled && $scrollDirection === 'down' ? '100%' : '0'});
   transition: transform 0.5s ease, opacity 0.5s ease;
+  ${tablet({
+    width: "100%",
+    backgroundColor: `${variables.bgColor}`,
+    height: "50vh",
+  })}
 `

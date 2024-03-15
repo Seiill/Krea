@@ -13,6 +13,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 margin-bottom: 1rem;
+width: 100%;
+
 `
 export const  AboutUsProfile = styled.div`
 width: 100%;
@@ -80,6 +82,7 @@ text-align: center;
 export const SectionContainer = styled.article`
 display: flex; 
 flex-direction: column;
+width: 100%;
 
 `
 export const Image = styled.img`

@@ -42,7 +42,7 @@ width: 80%;
 
 
 export const ImageContainer = styled.div`
-width: 50%;
+width: 100%;
 ${mobile({
   width:"90%",
 })}
@@ -53,7 +53,7 @@ export const Image = styled.img`
 
 `;
 export const Article= styled.article`
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 20px;

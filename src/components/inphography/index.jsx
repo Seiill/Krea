@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { infography } from '../../data';
-import { Container,ConatinerThumbnail, Image, ImageContainer,Thumbnail, Title, Description } from './inphoGraphElements'; 
-import Modal from './modal'
+import { Container, ConatinerThumbnail, Image, ImageContainer, Thumbnail, Title, Description } from './inphoGraphElements';
+import Modal from './modal';
 import icon1 from '../../assets/Infografia-Diseño-Web.jpg';
 import icon2 from '../../assets/Infografia-Imagen-Corporativa.jpg';
 import icon3 from '../../assets/prehome image.svg';
 import diseñoWeb from '../../assets/pdf/diseño-web.pdf';
 import imagenCorp from '../../assets/pdf/imagen-corporativa.pdf';
-import rrssSociales from '../../assets/pdf/rrss-sociales.pdf'
+import rrssSociales from '../../assets/pdf/rrss-sociales.pdf';
+
 const getIconPath = (iconName) => {
   switch (iconName) {
     case 'icon1':
@@ -20,6 +22,7 @@ const getIconPath = (iconName) => {
       return '';
   }
 };
+
 const getPDFPath = (iconName) => {
   switch (iconName) {
     case 'icon1':
@@ -35,6 +38,30 @@ const getPDFPath = (iconName) => {
 
 const Infography = () => {
   const [currentInfography, setCurrentInfography] = useState(null);
+  const [showCards, setShowCards] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.4 // Cambiar el umbral a 40%
+    };
+
+    const observer = new IntersectionObserver(([entry]) => {
+      setShowCards(entry.isIntersecting);
+    }, options);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
 
   const selectInfography = (index) => {
     setCurrentInfography(infography[index]);
@@ -45,23 +72,28 @@ const Infography = () => {
   };
 
   return (
-    <Container>
+    <Container ref={ref}>
       <Title>Descubre nuestras infografías y visualiza el brillante horizonte para tu éxito empresarial. Juntos, construyamos el camino hacia el logro de tus metas.</Title>
-      <ConatinerThumbnail >
-      {infography.map((item, index) => (
-        <Thumbnail key={item.id} onClick={() => selectInfography(index)}>
-          <ImageContainer><Image src={getIconPath(item.icon)} alt={item.title} /></ImageContainer>
-          <Description>{item.title}</Description>
-        </Thumbnail>
-      ))}
+      <ConatinerThumbnail>
+        {infography.map((item, index) => (
+          <motion.div
+            key={item.id}
+            initial={{ opacity: 0, x: -20 }} // Animación inicial desde la izquierda
+            animate={{ opacity: showCards ? 1 : 0, x: showCards ? 0 : -20 }} // Animación al ser visible
+            transition={{ delay: index * 0.1 }} // Retraso progresivo
+          >
+            <Thumbnail onClick={() => selectInfography(index)}>
+              <ImageContainer><Image src={getIconPath(item.icon)} alt={item.title} /></ImageContainer>
+              <Description>{item.title}</Description>
+            </Thumbnail>
+          </motion.div>
+        ))}
       </ConatinerThumbnail>
       {currentInfography && (
-              <Modal onClose={closeInfography} pdfUrl={getPDFPath(currentInfography.icon)} title={currentInfography.title} />
-     
+        <Modal onClose={closeInfography} pdfUrl={getPDFPath(currentInfography.icon)} title={currentInfography.title} />
       )}
     </Container>
   );
 };
 
 export default Infography;
-

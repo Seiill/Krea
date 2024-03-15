@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { variables } from '../Styled-Components/themMode';
-import { mobile } from '../Styled-Components/Responsive';
+import { mobile, tablet } from '../Styled-Components/Responsive';
 
 export const Nav = styled.nav`
 
@@ -72,6 +72,13 @@ position: absolute;
     textAlign: "center",
     margin: "0 2px",
     })}
+    ${tablet({
+    right: "35px",
+    bottom: "104px",
+    textWrap: "balance",
+    textAlign: "center",
+    margin: "0 2px",
+    })}
 `;
 
 export const H2 = styled.h2`
@@ -133,6 +140,12 @@ export const Img = styled.img`
     height: '100vh',
     objectPosition: 'center',
     marginTop: '50px',
+  })}
+  ${tablet({
+    height: '100vh',
+    objectPosition: 'center',
+    marginTop: '50px',
+
   })}
 `;
 
