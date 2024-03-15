@@ -48,7 +48,7 @@ const Toast = ({ message, visible, onClose }) => {
     if (visible) {
       const timer = setTimeout(() => {
         onClose();
-      }, 4000); 
+      }, 2000); 
 
       return () => clearTimeout(timer);
     }

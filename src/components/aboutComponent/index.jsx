@@ -4,8 +4,6 @@ import { FaHeartbeat } from "react-icons/fa";
 import { GiHolyGrail } from "react-icons/gi";
 import { GrConnect } from "react-icons/gr";
 import descPersonas from '../../assets/profiles-image.svg'
-import ImageProf from '../../assets/profOne.jpg'
-import ImagePro from '../../assets/profTwo.jpeg'
 import { valorData } from '../../data';
 import name from '../../assets/logo.svg'
 import { Container, VideoContainer,TextContainer, Titles, SectionContainer, AboutUsProfile, PlatformSection, EstrategyContainer, Title, Image, ValorSection, ValorCard, Description, ImageContainer, TitleFirst, IconContainer} from './aboutElements'

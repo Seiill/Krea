@@ -8,7 +8,7 @@ text-align: center;
   width: 100%;
   height: 100%;
   background-color: ${variables.primaryColor};
-  position: absolute;
+  position: fixed;
   z-index: 5;
   top: 0;
   left: ${({ isOpen }) => (isOpen ? '0' : '-100%')};

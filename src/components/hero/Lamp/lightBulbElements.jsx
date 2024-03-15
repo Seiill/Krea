@@ -27,7 +27,6 @@ export const GridContainer = styled.div`
 `;
 export const LeftColumn = styled.div`
   grid-area: left;
-  /* background-color: #3498db; */
   color: #fff;
   padding: 10px;
 `;
@@ -38,7 +37,7 @@ export const CenterColumn = styled.div`
   margin-bottom: 100px;
   ${mobile(
     {
-      height: "350px",
+      height: "200px",
     }
   )}
 `;
@@ -67,6 +66,11 @@ export const TextContainer = styled.div`
   padding: 1.5rem 0;
   border-bottom: solid 2px ${variables.secondColor};
   border-radius: 0 0 0 20px;
+  ${mobile({
+    padding: "2.5rem 2px",
+    textWrap:" balance",
+textAlign: "center",
+  })}
 `;
 export const Title = styled.h1`
 color: ${variables.secondColor};
@@ -83,6 +87,7 @@ margin: auto;
 padding: 20px 0;
 ${mobile({
   top: "2rem",
+  fontSize: `${variables.smallFont}`,
 })}
 `
 export const Description = styled.p`
@@ -98,7 +103,13 @@ export const Blister = styled.div`
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: ${(props) => (props.$isswitchon ? '#ccc' : '#FEEB3D')};
+  background-color: ${(props) => (props.$isswitchon ? '#ccc' : '#FFE268')};
+${tablet({
+    width: "100px",
+    height: "100px",
+   
+})}
+
 `;
 
 export const Filament = styled.svg`
@@ -111,6 +122,11 @@ export const Filament = styled.svg`
   path.cls-1 {
     fill: ${variables.secondColor};
   }
+  ${tablet({
+    width: "28%",
+    top: "40px",
+    left: "50%",
+  })}
 `;
 
 export const Vastago = styled.div`
@@ -133,7 +149,16 @@ top: 73px;
     background-color: inherit;
     transform: skew(30deg, 0) scaleY(-1);
     z-index: 1;
+    ${tablet({
+      left: "36px",
+    })}
   }
+  ${tablet({
+    left: '31px',
+    height: '32px',
+    width:'2px',
+    top: '50px',
+  })}
 `;
 
 export const Cap = styled.div`
@@ -146,6 +171,12 @@ position: absolute;
     top: 125px;
     z-index: -1;
     border-radius: 0 0 25px 25px;
+    ${tablet({
+      width: '21px',
+      height: '40px',
+      left:'50%',
+      top: '60px',
+    })}
 `
 export const Linecap = styled.div`
 position: absolute;
@@ -154,6 +185,10 @@ z-index: 2;
 width: 100%;
 height: 3px;
 background-color: #000;
+${tablet({
+  top: '17px',
+  height:'2px',
+})}
 
 &::before {
     content: '';
@@ -165,5 +200,10 @@ background-color: #000;
     background-color: inherit;
     transform: scaleY(-1);
     z-index: 3;
+    ${tablet({
+      top: "10px",
+    })}
   }
+
+
 `

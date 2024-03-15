@@ -32,21 +32,6 @@ ${mobile({
   display: "none"
 })}
 `
-/* export const DivText= styled.div`
-position: relative;
-z-index:2;
-width: 50%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-row-gap: 2px;
-background-color: ${variables.bgColor};
-transform: translateX(${({ $scrolled, $scrollDirection }) =>
-    $scrolled && $scrollDirection === 'down' ? '-687px' : '0'});
-  transition: transform 0.5s ease;
-` */
-// This style es for wacth the unmount component with we do scroll, maybe it will quite in the future 
 export const DivTextStyled = styled.div`
   position: relative;
   z-index: 2;

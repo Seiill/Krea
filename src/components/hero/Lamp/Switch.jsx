@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { mobile } from '../../Styled-Components/Responsive';
+import { mobile, tablet } from '../../Styled-Components/Responsive';
 const SwitchContainer = styled.div`
 left: 50%;
     position: absolute;
@@ -9,8 +9,11 @@ left: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+${tablet({
+  bottom: "28%",
+})}
 ${mobile({
-  bottom: "58%",
+  bottom: "70%",
 
 })}
 `;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { mobile } from '../Styled-Components/Responsive';
+import { mobile, tablet } from '../Styled-Components/Responsive';
 import { variables } from '../Styled-Components/themMode';
 export const Container = styled.div`
 position: relative;
@@ -8,14 +8,26 @@ top: 0;
   width: 100%;
   height: 100vh;
   align-items: center;
-  justify-content: space-evenly;
   flex-direction: column;
   justify-content: center;
+
+  ${tablet({
+    padding: "150px 0",
+  })}
 `;
 export const Thumbnail = styled.div`
   cursor: pointer;
-`;
+  ${tablet({
+    width: '100%',
+  })}
 
+`;
+export const ConatinerThumbnail = styled.div`
+display: flex;
+${tablet({
+    flexDirection: 'column',
+})}
+`
 export const Wrapper = styled.div`
 display: flex;
 flex-direction: column;
@@ -33,7 +45,8 @@ padding: 4rem 0;
 export const Title = styled.h2`
 text-wrap: balance;
 text-align: center;
-width: 60%;
+width: 70%;
+margin-top: 220px;
 padding: 1.2rem 0;
 color: ${variables.primaryColor};
 `;
@@ -65,6 +78,10 @@ padding: 1rem;
   border: solid 2px ${variables.hoverPrimaryDarkColor};
   border-radius: .8rem;
   display: flex;
+  ${tablet({
+    width: "300px",
+    height: "300px",
+  })}
 
 `;
 export const Button = styled.button`

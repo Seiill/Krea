@@ -14,21 +14,28 @@ const ContactForm = () => {
     <Container>
       <FormContainer onSubmit={handleSubmit(onSubmit)}>
         <LeftContainer>
+          <DataContainer>
           <InputLabel htmlFor="fullName">Nombre Completo</InputLabel>
           <InputField type="text" {...register('fullName', { required: true })} />
+          </DataContainer>
           {errors.fullName && <ErrorText>Este campo es requerido</ErrorText>}
           
+          <DataContainer>
           <InputLabel htmlFor="email">Email</InputLabel>
           <InputField type="email" {...register('email', { required: true })} />
+          </DataContainer>
           {errors.email && <ErrorText>Este campo es requerido</ErrorText>}
-
+          <DataContainer>
           <InputLabel htmlFor="phone">Teléfono</InputLabel>
           <InputField type="tel" {...register('phone', { required: true })} />
+          </DataContainer>
           {errors.phone && <ErrorText>Este campo es requerido</ErrorText>}
-
+          <DataContainer>
           <InputLabel>¿Cómo podemos ayudarte?</InputLabel>
           <TextAreaField {...register('message')} />
+          </DataContainer>
 
+          <DataContainer>
           <CheckboxLabel>
             <input type="checkbox" {...register('privacyPolicy')} />
             He leído y acepto las políticas de privacidad
@@ -38,6 +45,7 @@ const ContactForm = () => {
             <input type="checkbox" {...register('newsletter')} />
             Me gustaría recibir noticias
           </CheckboxLabel>
+          </DataContainer>
         </LeftContainer>
         <RightContainer>
           <ImageContainer>
@@ -61,8 +69,11 @@ const FormContainer = styled.form`
 `;
 
 const LeftContainer = styled.div`
+display: flex;
   flex: 1;
   padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const RightContainer = styled.div`
@@ -115,5 +126,10 @@ const CheckboxLabel = styled.label`
 const ErrorText = styled.span`
   color: red;
 `;
-
+const DataContainer = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+`
 export default ContactForm;

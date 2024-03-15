@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { infography } from '../../data';
-import { Container, Wrapper, Image, ImageContainer,Thumbnail, Title, Description } from './inphoGraphElements'; 
+import { Container,ConatinerThumbnail, Image, ImageContainer,Thumbnail, Title, Description } from './inphoGraphElements'; 
 import Modal from './modal'
 import icon1 from '../../assets/Infografia-Diseño-Web.jpg';
 import icon2 from '../../assets/Infografia-Imagen-Corporativa.jpg';
@@ -47,14 +47,14 @@ const Infography = () => {
   return (
     <Container>
       <Title>Descubre nuestras infografías y visualiza el brillante horizonte para tu éxito empresarial. Juntos, construyamos el camino hacia el logro de tus metas.</Title>
-      <div style={{display:'flex'}}>
+      <ConatinerThumbnail >
       {infography.map((item, index) => (
         <Thumbnail key={item.id} onClick={() => selectInfography(index)}>
           <ImageContainer><Image src={getIconPath(item.icon)} alt={item.title} /></ImageContainer>
           <Description>{item.title}</Description>
         </Thumbnail>
       ))}
-      </div>
+      </ConatinerThumbnail>
       {currentInfography && (
               <Modal onClose={closeInfography} pdfUrl={getPDFPath(currentInfography.icon)} title={currentInfography.title} />
      

@@ -64,6 +64,14 @@ position: absolute;
     bottom: 100px;
     right: 170px;
     font-size: 1.2rem;
+
+    ${mobile({
+    right: "15px",
+    bottom: "104px",
+    textWrap: "balance",
+    textAlign: "center",
+    margin: "0 2px",
+    })}
 `;
 
 export const H2 = styled.h2`
@@ -119,7 +127,13 @@ export const Content = styled.div`
 export const Img = styled.img`
   width: 100%;
   max-height: 650px;
-  object-fit: cover; 
+  object-fit: cover;
+  
+  ${mobile({
+    height: '100vh',
+    objectPosition: 'center',
+    marginTop: '50px',
+  })}
 `;
 
 export const ShowContainer = styled.div`
