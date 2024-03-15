@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 import Image from '../../assets/contact-img.svg';
 import { variables } from '../Styled-Components/themMode';
-
+import {mobile, tablet }from '../Styled-Components/Responsive'
 const ContactForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [isVisible, setIsVisible] = useState(false);
@@ -150,6 +150,9 @@ const FormContainer = styled.form`
   column-gap: 1rem;
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   transition: opacity 0.5s ease;
+  ${mobile({
+    flexDirection: 'column-reverse',
+  })}
 `;
 
 const LeftContainer = styled.div`
@@ -162,6 +165,9 @@ const LeftContainer = styled.div`
 
 const RightContainer = styled.div`
   flex: 1;
+  ${mobile({
+    height: "35%",
+  })}
 `;
 
 const ImageContainer = styled.div`
@@ -170,6 +176,10 @@ const ImageContainer = styled.div`
   border-radius: 50% 0;
   background-color: #f1f9ff;
   overflow: hidden;
+
+  ${mobile({
+    borderRadius: "30% 0",
+  })}
 `;
 
 const Img = styled.img`
