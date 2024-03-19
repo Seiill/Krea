@@ -12,7 +12,7 @@ top: 0;
   justify-content: center;
 
   ${tablet({
-    padding: "150px 0",
+    height: "auto",
   })}
 `;
 export const Thumbnail = styled.div`
@@ -49,6 +49,9 @@ width: 70%;
 margin-top: 220px;
 padding: 1.2rem 0;
 color: ${variables.primaryColor};
+${mobile({
+  margin:"auto",
+})}
 `;
 export const Description = styled.p`
 font-size: 1.2rem;

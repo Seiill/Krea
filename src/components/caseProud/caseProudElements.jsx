@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { variables } from '../Styled-Components/themMode';
-import { mobile } from '../Styled-Components/Responsive';
+import { mobile, tablet } from '../Styled-Components/Responsive';
 
 export const Container = styled.div`
 position: relative;
@@ -9,10 +9,9 @@ position: relative;
   width: 100%;
   margin-top: -100vh;
   max-width: 1280px;
-  ${mobile(
+  ${tablet(
     {
       marginTop: "0",
-      height: "80vh",
     }
   )}
 `;
@@ -24,18 +23,21 @@ padding: 4rem 0;
 width: 100%;
 max-width: 1280px;
 overflow: hidden;
-align-items: flex-end;
-${mobile(
+align-items: center;
+${tablet(
   {
     flexDirection: "column",
     padding: "2rem 0",
     rowGap: "1rem",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
   }
 )}
 `;
 
 export const Description = styled.p`
-overflow-wrap: break-word;
+text-wrap: balance;
 font-size:${variables.smallFont};
 font-weight: ${variables.mediumBoldFont};
 color: ${variables.hoverPrimaryDarkColor};

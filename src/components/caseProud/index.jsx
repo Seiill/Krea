@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Description, Image, Article, ButtonContainer, ButtonNext, ImageContainer, Container } from './caseProudElements';
+import { Description, Image, Article, ButtonContainer, ButtonNext, ImageContainer, Container, Wrapper } from './caseProudElements';
 import { caseProud } from '../../data';
 import { useNavigate } from 'react-router-dom';
 import icon1 from '../../assets/lapiz-jedan.jpg';
@@ -44,7 +44,7 @@ const CaseProud = () => {
                 animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                 transition={{ duration: 0.5 }}
             >
-                <div style={{ display: 'flex' }}>
+                <Wrapper >
                     <ImageContainer>
                         <Image src={icon1}  alt="Boceto de logo de JEDAN" /> 
                     </ImageContainer>
@@ -54,7 +54,7 @@ const CaseProud = () => {
                             <ButtonNext onClick={handleButtonClick}>Ver Más</ButtonNext>
                         </ButtonContainer>
                     </Article>
-                </div>
+                </Wrapper>
             </motion.div>
         </Container>
     );
