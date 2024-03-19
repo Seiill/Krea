@@ -219,7 +219,7 @@ export const cardsData = [
   ];
   export const caseProud=[
     {id:"0001",
-    description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.", icon:'icon1'},
+    description:'¡Nos sentimos orgullosos de haber llevado a JEDAN al mundo digital! Hemos creado un sitio web y gestionado sus redes sociales con pasión y dedicación. Cada paso del proceso, desde el diseño del logo, la gestión de las redes sociales, hasta el desarrollo de su sitio web, refleja nuestro compromiso con la excelencia. aquí puedes descubrir cómo hemos transformado la presencia en línea de JEDAN.', icon:'icon1'},
     {id:"0002",
     description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprengalería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.", icon:'icon2'},
     {id:"0003",

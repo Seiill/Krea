@@ -3,7 +3,7 @@ export const variables = {
     bigFont: '2.5rem',
     mediumFont: '2rem',
     semimediumFont: '1.4rem',
-    smallFont: '.9rem',
+    smallFont: '1.1rem',
     boldFont: '700',
     mediumBoldFont: '600',
     regularFont: '500',

@@ -119,24 +119,26 @@ export const NavBtn = styled.nav`
 `;
 
 export const NavBtnLink = styled(LinkR)`
-  border-radius: 50px;
-  background: ${variables.hoverPrimaryDarkColor};
-  white-space: nowrap;
-  padding: 10px 22px;
-  color: ${variables.bgColor};
-  font-size:${variables.smallFont};
-  font-weight: ${variables.mediumBoldFont};
+width: fit-content;
+padding: 1rem 3rem; 
+background-color: ${variables.secondColor};
+border: none;
+text-align: center;
+color: ${variables.bgColor};
+font-weight: ${variables.boldFont};
+cursor: pointer;
+transition: all .3s ease-in-out;
+border-radius: 20px;
+text-decoration: none;
+&:  hover {
+  background-color: ${variables.hoverSecondaryDarkColor};
+}
+&:focus {
   outline: none;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-
-  &:hover {
-    background: ${variables.bgColor};
-    color: ${variables.hoverPrimaryDarkColor};
-    border: solid 2px ${variables.hoverSecondaryDarkColor};
-  }
+}
+&:active {
+  transform: scale(.9);
+}
 `;
 
 export const ScrolledNavLinks = styled(NavLinks)`

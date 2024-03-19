@@ -37,12 +37,16 @@ ${mobile(
 export const Description = styled.p`
 overflow-wrap: break-word;
 font-size:${variables.smallFont};
+font-weight: ${variables.mediumBoldFont};
+color: ${variables.hoverPrimaryDarkColor};
 width: 80%;
 `;
 
 
 export const ImageContainer = styled.div`
-width: 100%;
+width: 60%;
+border-radius: 20px;
+overflow: hidden;
 ${mobile({
   width:"90%",
 })}
@@ -53,11 +57,13 @@ export const Image = styled.img`
 
 `;
 export const Article= styled.article`
-    width: 100%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
     align-items: flex-end;
+    justify-content: center;
+    text-align: right;
     ${mobile({
       width:"90%",
       alignItems:"center",
@@ -67,17 +73,22 @@ export const Article= styled.article`
     })}
 `
 export const ButtonNext = styled.button`
-font-size: ${variables.smallFont};
-color: #111;
-transition: transform 0.3s;
-margin: 0 20px;
-margin-bottom: 20px;
-
-  &:hover {
-    color: #666;
-    text-decoration: underline;
-    transform: scale(1.1);
-  }
+width: fit-content;
+padding: 1rem 3rem; 
+background-color: ${variables.secondColor};
+border: none;
+text-align: center;
+color: ${variables.bgColor};
+font-weight: ${variables.boldFont};
+cursor: pointer;
+transition: all .3s ease-in-out;
+border-radius: 20px;
+&:focus {
+  outline: none;
+}
+&:active {
+  transform: scale(.9);
+}
 `
 export const ButtonContainer = styled.div`
 display: flex;
