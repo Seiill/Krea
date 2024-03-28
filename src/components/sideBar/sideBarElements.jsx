@@ -11,7 +11,7 @@ text-align: center;
   position: fixed;
   z-index: 5;
   top: 0;
-  left: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  left: ${({ $isOpen }) => ($isOpen ? '0' : '-100%')};
   transition: left 0.3s ease;
   display: flex; 
   justify-content: center; 

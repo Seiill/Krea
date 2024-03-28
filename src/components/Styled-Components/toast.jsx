@@ -35,8 +35,8 @@ const ToastContainer = styled.div`
   padding: 10px 20px;
   border-radius: 10px;
   border: solid 1px ${variables.primaryColor};
-  visibility: ${props => (props.visible ? 'visible' : 'hidden')};
-  animation: ${props => (props.visible ? fadeIn : fadeOut)} 0.5s ease-in-out;
+  visibility: ${props => (props.$visible ? 'visible' : 'hidden')};
+  animation: ${props => (props.$visible ? fadeIn : fadeOut)} 0.5s ease-in-out;
   font-size: 1rem;
   font-weight: ${variables.mediumBoldFont};
   position: relative; 
@@ -55,7 +55,7 @@ const Toast = ({ message, visible, onClose }) => {
   }, [visible, onClose]);
 
   return (
-    <ToastContainer visible={visible}>
+    <ToastContainer $visible={visible}>
      <IoWarningOutline /> {  message}
     </ToastContainer>
   );

@@ -8,7 +8,7 @@ import { navItems } from '../../data';
 import { FaBars } from 'react-icons/fa';
 
 const StyledFaBars = styled(FaBars)`
-  color: ${({ isOpen }) => (isOpen ? variables.primaryColor : variables.bgColor)};
+  color: ${({ $isOpen }) => ($isOpen ? variables.primaryColor : variables.bgColor)};
 `;
 
 const Navbar = ({ toggle }) => {
@@ -43,7 +43,7 @@ const Navbar = ({ toggle }) => {
               <Img src={IconLogo} alt="Logo" />
             </NavLogo>
             <MobileIcon onClick={toggle}>
-              <StyledFaBars isOpen={$scrollNav} />
+              <StyledFaBars $isOpen={$scrollNav} />
             </MobileIcon>
             <NavMenu>
               {navItems.map((item) => (

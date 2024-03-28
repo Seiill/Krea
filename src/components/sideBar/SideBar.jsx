@@ -4,7 +4,7 @@ import { SidebarContainer, SidebarMenu, SidebarItem, SidebarLink,  } from './sid
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
-    <SidebarContainer isOpen={isOpen}>
+    <SidebarContainer $isOpen={isOpen}>
       <SidebarMenu>
         <SidebarItem>
           <SidebarLink to="/" onClick={toggle}>Inicio</SidebarLink>

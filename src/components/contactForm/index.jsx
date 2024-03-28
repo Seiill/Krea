@@ -2,9 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
+import axios from 'axios'; 
 import Image from '../../assets/contact-img.svg';
 import { variables } from '../Styled-Components/themMode';
-import {mobile, tablet }from '../Styled-Components/Responsive'
+import { mobile, tablet } from '../Styled-Components/Responsive';
+import { getCsrfToken } from '../../utilities/csrf';
+
+
 const ContactForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
   const [isVisible, setIsVisible] = useState(false);
@@ -14,7 +18,7 @@ const ContactForm = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.4 // Umbral del 40%
+      threshold: 0.4 
     };
 
     const observer = new IntersectionObserver(([entry]) => {
@@ -32,13 +36,28 @@ const ContactForm = () => {
     };
   }, []);
 
-  const onSubmit = (data) => {
-    console.log(data); // Aquí puedes enviar los datos del formulario a tu servidor
+  const onSubmit = async (data) => {
+    try {
+      // Obtener el token CSRF
+      const response = await axios.get('http://localhost:8000/csrf-token');
+      const token = response.data.token;
+  
+      // Enviar la solicitud POST con el token CSRF
+      const headers = { 'X-CSRF-TOKEN': token };
+      await axios.post('http://localhost:8000/submit-contact-form', data, { headers });
+  
+      console.log('Formulario enviado correctamente');
+      console.log("data envida",response.data);
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+    }
   };
+  
+  
 
   return (
     <Container ref={ref}>
-      <FormContainer onSubmit={handleSubmit(onSubmit)} isVisible={isVisible}>
+      <FormContainer onSubmit={handleSubmit(onSubmit)} $isVisible={isVisible}>
         <LeftContainer>
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -148,9 +167,9 @@ const FormContainer = styled.form`
   display: flex;
   width: 80%;
   column-gap: 1rem;
-  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
   transition: opacity 0.5s ease;
-  ${mobile({
+  ${tablet({
     flexDirection: 'column-reverse',
   })}
 `;
@@ -165,8 +184,9 @@ const LeftContainer = styled.div`
 
 const RightContainer = styled.div`
   flex: 1;
-  ${mobile({
+  ${tablet({
     height: "35%",
+    overflow: "hidden",
   })}
 `;
 
@@ -177,7 +197,7 @@ const ImageContainer = styled.div`
   background-color: #f1f9ff;
   overflow: hidden;
 
-  ${mobile({
+  ${tablet({
     borderRadius: "30% 0",
   })}
 `;
