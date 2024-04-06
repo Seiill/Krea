@@ -39,17 +39,7 @@ font-family: 'DINAlternate';
   })}
 `;
 
-export const Aside = styled.aside`
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  margin: 20px;
-  height: 90%;
-  ${mobile({
-    marginTop:"2rem",
-    height: "auto",
-  })}
-`;
+
 
 export const H1 = styled.h1`
 
@@ -90,16 +80,22 @@ color: ${variables.hoverPrimaryDarkColor};
 font-weight: ${variables.regularFont};
 `;
 
-
+export const GridContainer = styled.div``
 export const ImageContainer = styled.figure`
   position: relative;
-  top: .7rem;
   overflow: hidden;
-  height: 90vh;
+  width: 100%;
   ${mobile({
     height: 'auto',
   })}
 `;
+export const ImageWrapper = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+`
 export const ViewFeatures = styled.button`
 width: fit-content;
 padding: 1rem 3rem; 
@@ -121,7 +117,8 @@ ${H3}, &::after{
   transition: inherit;
 }
 `
-
+export const Title = styled.h1`
+`
 export const Content = styled.div`
   width: 100%;
   height: 100%;
@@ -155,7 +152,6 @@ export const ShowContainer = styled.div`
   margin-top: 40px;
   display: grid;
   align-items: center;
-  grid-template-columns: 30% 70%;
   justify-items: stretch;
   justify-content: space-evenly;
   position: relative;
@@ -165,7 +161,11 @@ export const ShowContainer = styled.div`
   })}
  
 `;
-
+export const ImageGrid = styled.div`
+display: grid;
+  grid-template-columns:  1fr 2fr;
+  gap: 10px; 
+`;
 export const ButtonContainer = styled.div`
 position: absolute;
 z-index: 1;
@@ -229,3 +229,4 @@ width: 100%;
 max-width: 1280px;
 margin: auto;
 `
+export const SectionContainer= styled.section``

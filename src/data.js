@@ -212,8 +212,9 @@ export const cardsData = [
     },
   ]
   export const infography =[
-    {id:"inf-1",title:"Diseño Web", icon:'icon1',pdfName: 'diseño-web.pdf',},
+
     {id:"inf-2",title:"Identidad Visual", icon:'icon2', pdfName: 'imagen-corporativa.pdf',},
+    {id:"inf-1",title:"Diseño Web", icon:'icon1',pdfName: 'diseño-web.pdf',},
     {id:"inf-3",title:"Redes Sociales", icon:'icon3',pdfName: 'rrss-sociales.pdf'},
     
   ];
@@ -227,37 +228,76 @@ export const cardsData = [
     {id:"0004",
     description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedicaxtos especimen.", icon:'icon4'},
   ]
-  const servicesData = [
-    {
-      id:"0001",
-      name: 'Imagen Corporativa',
-      title: 'Imagen Corporativa',
-      description: 'Tu identidad es tu sello distintivo. Creamos una imagen que refleje la esencia de tu marca. Desde logotipos memorables hasta paletas de colores que cuentan tu historia, damos vida a tu identidad corporativa. Descubre cómo podemos reflejar la esencia de tu marca a través de un diseño que perdura. 💡🎨',
-      images: ['bsa-brand','bsa-models','jedan-brand', 'sif-brand', 'sif-models'],
-    },
-    {
-      id:"0002",
-      name: 'Desarrollo Web',
-      title: 'Desarrollo Web',
-      description: 'Tu presencia en línea es tu carta de presentación. Construimos sitios web modernos y funcionales que cautivan a tus visitantes desde el primer clic. Navegación intuitiva, diseño adaptativo y una experiencia única para tus usuarios. ¡Construyamos juntos una carta de presentación impactante! 🌐✨',
-      images: ['jedan-web', 'estadistic','selectedOption'],
-    },
-    {
-      id:"0003",
-      name: 'Manejo de RRSS',
-      title: 'Manejo de RRSS',
-      description: 'Potencia tu marca en el mundo digital con nuestras estrategias de redes sociales. Desarrollamos contenido estratégico que fortalece tu presencia y conecta de manera significativa con tu audiencia. Cultivamos una comunidad en línea que impulsa la interacción y se alinea con tu modelo de negocio. ¡Haz que tu marca destaque! 🚀',
-      images: ['prehome image', 'estadistic','selectedOption'],
-    },
-    {
-      id:"0004",
-      name: ' Animación Digital',
-      title: 'Animación Digital',
-      description: 'Dale vida a tu mensaje. A través de la magia de la animación, transformamos ideas en experiencias visuales cautivadoras. Desde vídeos explicativos hasta contenido dinámico, impacta a tu audiencia de manera innovadora. Descubre cómo podemos darle vida a tus ideas a través de la animación. 🚀🎥✨',
-      images: ['prehome image', 'estadistic','selectedOption'],
-    }
-  ];
-  export default servicesData;
+  const servicesData = [{
+    type: 'brand',
+    items: [
+      {
+        id: "0001",
+        name: 'Marca 1',
+        title: 'Imagen Corporativa',
+        jobs:[
+          {description: 'BSA - Barcelona Soccer Academy / Orlando Fl / Branding / Re branding / Diseño Grafico',
+        images: ['bsa-logo', 'bsa-card', 'bsa-brand'],},
+          {description: 'Jedan Investment Group / Orlando Fl / Branding / Diseño Web / Creación RRSS',
+        images: ['jedan-brand', 'jedan-logo', 'jedan-card'],},
+          {description: 'Social Investment Foundation / Colombia / Branding / Diseño Web / Creación RRSS',
+        images: ['sif-logo', 'sif-card', 'sif-brand'],},]
+        
+      },
+    ]
+  },
+  {
+    type: 'web',
+    items: [
+      {
+        id: "0003",
+        name: 'Web 1',
+        title: 'Desarrollo de Sitios Web',
+        jobs:[
+          {description: 'Tu presencia en línea es primordial para tus usuarios. Desarrollamos sitios web modernos, funcionales y adaptados a tus necesidades. 🌐💻',images: ['web-1', 'web-2', 'web-3'],},
+          {description: 'Tu presencia en línea es primordial para tus usuarios. Desarrollamos sitios web modernos, funcionales y adaptados a tus necesidades. 🌐💻',images: ['web-1', 'web-2', 'web-3'],},
+          {description: 'Tu presencia en línea es primordial para tus usuarios. Desarrollamos sitios web modernos, funcionales y adaptados a tus necesidades. 🌐💻',images: ['web-1', 'web-2', 'web-3'],}
+        ],
+        },
+    ]
+  },
+  {
+    type: 'rrss',
+    items: [
+      {
+        id: "0005",
+        name: 'Redes Sociales 1',
+        title: 'Gestión de Redes Sociales',
+        jobs:[{description: 'Potencia tu marca en el mundo digital con nuestras estrategias de redes sociales. Desarrollamos contenido estratégico que fortalece tu presencia y conecta de manera significativa con tu audiencia. ¡Haz que tu marca destaque! 🚀',
+        images: ['social-1', 'social-2', 'social-3'],},
+        {description: 'Potencia tu marca en el mundo digital con nuestras estrategias de redes sociales. Desarrollamos contenido estratégico que fortalece tu presencia y conecta de manera significativa con tu audiencia. ¡Haz que tu marca destaque! 🚀',
+        images: ['social-1', 'social-2', 'social-3'],},
+        {description: 'Potencia tu marca en el mundo digital con nuestras estrategias de redes sociales. Desarrollamos contenido estratégico que fortalece tu presencia y conecta de manera significativa con tu audiencia. ¡Haz que tu marca destaque! 🚀',
+        images: ['social-1', 'social-2', 'social-3'],},
+      ]
+        
+      },
+    ]
+  },
+  {
+    type: 'multimedia',
+    items: [
+      {
+        id: "0006",
+        name: 'Multimedia 1',
+        title: 'Producción de Contenido Multimedia',
+        jobs:[{description: 'Dale vida a tu marca con contenido multimedia cautivador. Desde videos promocionales hasta animaciones, creamos contenido que capta la atención y deja una impresión duradera. 🎥🎬',
+        images: ['video-1', 'video-2', 'video-3'],},
+        {description: 'Dale vida a tu marca con contenido multimedia cautivador. Desde videos promocionales hasta animaciones, creamos contenido que capta la atención y deja una impresión duradera. 🎥🎬',
+        images: ['video-1', 'video-2', 'video-3'],},{description: 'Dale vida a tu marca con contenido multimedia cautivador. Desde videos promocionales hasta animaciones, creamos contenido que capta la atención y deja una impresión duradera. 🎥🎬',
+        images: ['video-1', 'video-2', 'video-3'],},]
+        
+      },
+    ]
+  },
+];
+
+export default servicesData;
 
   export const navItems = [
     {

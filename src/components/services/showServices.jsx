@@ -1,92 +1,71 @@
-import React, { useState, useEffect } from 'react';
-import { ShowContainer, ImageContainer,Content, ButtonContainer,ViewFeatures, Aside, H1, H3, H2, P, Img, IfContainer } from './navElements';
-import image from '../../assets/services-selected-03.svg';
-import SlideButton from '../Styled-Components/SlideButton';
+import React from 'react';
+import { ShowContainer, SectionContainer, GridContainer, ViewFeatures, H3, P, Img, IfContainer, Title, ImageContainer, ImageGrid, ImageWrapper} from './navElements';
 
-import prehomeImage from '../../assets/prehome image.svg';
-import estadisticImage from '../../assets/estadistic.svg';
-import selectedOptionImage from '../../assets/selectedOption.svg';
-import Navigation from './Navigation';
-import bsaBrand from '../../assets/bsa-brand.jpg'
-import bsaModel from '../../assets/bsa-models.jpg'
-import jedanBrand from '../../assets/jedan-brand.jpg'
-import jedanWeb from '../../assets/jedan-web.jpg'
-import sifBrand from '../../assets/sif-brand.jpg'
-import sifModel from '../../assets/sif-models.jpg'
+import image from '../../assets/services-selected-03.svg';
+import bsaBrand from '../../assets/bsa-brand.svg';
+import bsaLogo from '../../assets/bsa-logo.svg'; 
+import bsaCard from '../../assets/bsa-card.svg';
+
+import sifBrand from '../../assets/sif-brand.svg';
+import sifLogo from '../../assets/sif-logo.svg';
+import sifCard from '../../assets/sif-card.svg';
+
+import jedanBrand from '../../assets/jedan-brand.svg';
+import jedanLogo from '../../assets/jedan-logo.svg';
+import jedanCard from '../../assets/jedan-card.svg';
 const imageMap = {
   'bsa-brand': bsaBrand,
-  'bsa-models': bsaModel,
-  'jedan-brand': jedanBrand,
-  'jedan-web': jedanWeb,
+  'bsa-logo': bsaLogo,
+  'bsa-card': bsaCard,
   'sif-brand': sifBrand,
-  'sif-models': sifModel,
-  'estadistic': estadisticImage,
-  'selectedOption': selectedOptionImage,
+  'sif-logo': sifLogo,
+  'sif-card': sifCard,
+  'jedan-brand': jedanBrand,
+  'jedan-logo': jedanLogo,
+  'jedan-card': jedanCard,
+  
 };
 
 const importImages = (imageNames) => {
   return imageNames.map((imageName) => imageMap[imageName]);
 };
 
-const ShowServices = ({ selectedService,  onSelectService, servicesData}) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const goToPrevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? loadedImages.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === loadedImages.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  useEffect(() => {
-    setCurrentIndex(0);
-  }, [selectedService]);
-  const [loadedImages, setLoadedImages] = useState([]);
-
-
-  useEffect(() => {
-    if (selectedService) {
-      const images = importImages(selectedService.images);
-      setLoadedImages(images);
-    }
-  }, [selectedService]);
+const ShowServices = ({ selectedService }) => {
+  console.log("selectedService en ShowServices:", selectedService);
 
   if (!selectedService) {
     return (
       <IfContainer>
-        {/* <H1>Bienvenido</H1> */}
         <H3>Te invitamos a elegir el servicio que desees conocer</H3>
-        <Img src={image} alt="Dibujo de niña seleccionando opciones de un menú" />
-        {/* <Navigation services={servicesData} onSelectService={ onSelectService} /> */}
+        <Img src={image} alt="Ilustración de una niña seleccionando opciones de un menú de servicios, RRSS, Diseño web, Branding y Multimedia" />
       </IfContainer>
     );
   }
 
-  const { title, description } = selectedService;
-
   return (
     <ShowContainer>
-    <Aside>
-      <H2>{title}</H2>
-      <P>{description}</P>
+      <SectionContainer >
+        <Title>{selectedService.title}</Title>
+        {selectedService.jobs.map((job, index) => (
+          <GridContainer key={index}>
+            <P>{job.description}</P>
+            <ImageGrid>
+              <ImageWrapper>
+                {importImages(job.images.slice(0, 2)).map((imageSrc, index) => (
+                  <ImageContainer key={index}>
+                    <Img src={imageSrc} alt={job.images[index]} />
+                  </ImageContainer>
+                ))}
+              </ImageWrapper>
+              <ImageContainer>
+                <Img src={imageMap[job.images[2]]} alt={job.images[2]} />
+              </ImageContainer>
+            </ImageGrid>
+          </GridContainer>
+        ))}
+      </SectionContainer>
       <ViewFeatures>Ver Planes</ViewFeatures>
-    </Aside>
-    <ImageContainer>
-    
-      {loadedImages.map((image, index) => (
-        <Content key={index} style={{ display: index === currentIndex ? 'block' : 'none' }}>
-        <Img src={image} alt={`Imagen ${index + 1}`} /> 
-        </Content>
-      ))}
-      <ButtonContainer><SlideButton direction="prev" onClick={goToPrevSlide} />
-      <SlideButton direction="next" onClick={goToNextSlide} /></ButtonContainer>
-    </ImageContainer>
-  </ShowContainer>
+    </ShowContainer>
   );
 };
 

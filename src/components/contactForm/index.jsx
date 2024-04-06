@@ -39,12 +39,13 @@ const ContactForm = () => {
   const onSubmit = async (data) => {
     try {
       // Obtener el token CSRF
-      const response = await axios.get('http://localhost:8000/csrf-token');
+      const response = await axios.get('http://localhost:8000/back-krea/csrf-token');
       const token = response.data.token;
   
       // Enviar la solicitud POST con el token CSRF
       const headers = { 'X-CSRF-TOKEN': token };
-      await axios.post('http://localhost:8000/submit-contact-form', data, { headers });
+      await axios.post('http://localhost:8000/back-krea/submit-contact-form', data, { headers });
+
   
       console.log('Formulario enviado correctamente');
       console.log("data envida",response.data);
