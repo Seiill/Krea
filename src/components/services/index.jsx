@@ -1,6 +1,6 @@
 // Services.jsx
 import React, { useState } from 'react';
-import NavServices from './NavServices';
+import NavServices from './navServices';
 import ShowServices from './showServices';
 import servicesData from '../../data';
 
