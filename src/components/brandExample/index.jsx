@@ -6,6 +6,7 @@ import webImage from '../../assets/jedanMockupOne.jpg';
 import mobile from '../../assets/jedanWebMobile.jpg';
 import webMockup from '../../assets/webmockup-2.svg';
 import socialImage from '../../assets/mockup-two-jedan-80.jpg';
+import mockup from '../../assets/jedn.jpg';
 import whiteLogo from '../../assets/log-jedan-white.svg'
 import bg from '../../assets/jedan-banner-one.svg'
 const BrandExample = () => {
@@ -46,6 +47,9 @@ reflejando su visión, valores y compromiso con la excelencia.</Text></Descripti
             <ImageContainer src={mobile} alt=""/>
             <ImageContainer src={webMockup} alt=""/>
           </ContainerSection>
+        </Section>
+        <Section>
+          <Img src={mockup}  alt="mockup sitio web escritorio y mobile JEDAN" />
         </Section>
         <Section>
           <Img src={socialImage}  alt="mockup redes sociales JEDAN" />

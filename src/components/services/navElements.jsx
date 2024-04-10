@@ -3,21 +3,20 @@ import { variables } from '../Styled-Components/themMode';
 import { mobile, tablet } from '../Styled-Components/Responsive';
 
 export const Nav = styled.nav`
-
-  position: absolute;
+  position: sticky;
+  top: 
   display: flex;
   height: 60px;
   width: 100%;
   max-width: 1280px;
-  top: 70px;
   justify-content: space-around;
   z-index: 2;
+
   ${mobile({
     flexWrap: "wrap",
     rowGap: "1rem",
   })}
 `;
-
 export const ButtonServices = styled.button`
 width: 23%;
 height: 2.5rem;

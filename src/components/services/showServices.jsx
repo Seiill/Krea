@@ -10,6 +10,23 @@ import sifBrand from '../../assets/sif-brand.svg';
 import sifLogo from '../../assets/sif-logo.svg';
 import sifCard from '../../assets/sif-card.svg';
 
+import sifWeb1 from '../../assets/sif-web1.jpg';
+import sifWeb2 from '../../assets/sif-web2.jpg';
+import sifWeb3 from '../../assets/sif-web3.jpg';
+
+import eWeb1 from '../../assets/e-web1.jpg';
+import eWeb2 from '../../assets/e-web2.jpg';
+import eWeb3 from '../../assets/e-web3.jpg';
+
+import sft1 from '../../assets/sft1.jpg';
+import sft2 from '../../assets/sft2.jpg';
+import sft3 from '../../assets/sft3.jpg';
+
+import jedanRrss from '../../assets/mockup-two-jedan-80.jpg';
+import jedanRrss2 from '../../assets/rrss2-80.jpg';
+import jedanRrss3 from '../../assets/rrss2-80.jpg';
+
+
 import jedanBrand from '../../assets/jedan-brand.svg';
 import jedanLogo from '../../assets/jedan-logo.svg';
 import jedanCard from '../../assets/jedan-card.svg';
@@ -23,6 +40,18 @@ const imageMap = {
   'jedan-brand': jedanBrand,
   'jedan-logo': jedanLogo,
   'jedan-card': jedanCard,
+  'sif-web1': sifWeb1,
+  'sif-web2': sifWeb2,
+  'sif-web3': sifWeb3,
+  'e-web1': eWeb1,
+  'e-web2': eWeb2,
+  'e-web3': eWeb3,
+  'sft1': sft1,
+  'sft2': sft2,
+  'sft3': sft3,
+  'rrss1': jedanRrss,
+  'rrss2': jedanRrss2,
+  'rrss3': jedanRrss3,
   
 };
 
@@ -64,7 +93,7 @@ const ShowServices = ({ selectedService }) => {
           </GridContainer>
         ))}
       </SectionContainer>
-      <ViewFeatures>Ver Planes</ViewFeatures>
+      <ViewFeatures style={{ position: 'fixed', bottom: '100px', right: '34px'}}>Ver Planes</ViewFeatures>
     </ShowContainer>
   );
 };

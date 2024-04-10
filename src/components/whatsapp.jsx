@@ -20,7 +20,7 @@ const Button = styled.div`
   position: fixed;
   z-index: 10;
   bottom: 20px;
-  right: 20px;
+  right: 32px;
   width: 60px;
   height: 60px;
   border-radius: 50%;

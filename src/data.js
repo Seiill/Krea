@@ -254,9 +254,9 @@ export const cardsData = [
         name: 'Web 1',
         title: 'Desarrollo de Sitios Web',
         jobs:[
-          {description: 'Tu presencia en línea es primordial para tus usuarios. Desarrollamos sitios web modernos, funcionales y adaptados a tus necesidades. 🌐💻',images: ['web-1', 'web-2', 'web-3'],},
-          {description: 'Tu presencia en línea es primordial para tus usuarios. Desarrollamos sitios web modernos, funcionales y adaptados a tus necesidades. 🌐💻',images: ['web-1', 'web-2', 'web-3'],},
-          {description: 'Tu presencia en línea es primordial para tus usuarios. Desarrollamos sitios web modernos, funcionales y adaptados a tus necesidades. 🌐💻',images: ['web-1', 'web-2', 'web-3'],}
+          {description: 'SIF- Social Investment Foundation / Bogotá / Diseño UX-UI / Diseño Web / Prototipado /Desarrollo Web.',images: ['sif-web1', 'sif-web3', 'sif-web2'],},
+          {description: 'DecoSas- / Bogotá / Diseño UX-UI / Diseño Web / Prototipado /Desarrollo Web.',images: ['e-web1', 'e-web2', 'e-web3'],},
+          {description: 'SFT-SafeStartTraining / Orlando / Diseño UX-UI / Diseño Web / Prototipado /Desarrollo Web.',images: ['sft1', 'sft2', 'sft3'],}
         ],
         },
     ]
@@ -269,7 +269,7 @@ export const cardsData = [
         name: 'Redes Sociales 1',
         title: 'Gestión de Redes Sociales',
         jobs:[{description: 'Potencia tu marca en el mundo digital con nuestras estrategias de redes sociales. Desarrollamos contenido estratégico que fortalece tu presencia y conecta de manera significativa con tu audiencia. ¡Haz que tu marca destaque! 🚀',
-        images: ['social-1', 'social-2', 'social-3'],},
+        images: ['rrss3', 'rrss2', 'rrss1'],},
         {description: 'Potencia tu marca en el mundo digital con nuestras estrategias de redes sociales. Desarrollamos contenido estratégico que fortalece tu presencia y conecta de manera significativa con tu audiencia. ¡Haz que tu marca destaque! 🚀',
         images: ['social-1', 'social-2', 'social-3'],},
         {description: 'Potencia tu marca en el mundo digital con nuestras estrategias de redes sociales. Desarrollamos contenido estratégico que fortalece tu presencia y conecta de manera significativa con tu audiencia. ¡Haz que tu marca destaque! 🚀',
