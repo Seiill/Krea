@@ -227,12 +227,14 @@ export const cardsData = [
     description:"Lorem Ipsum es simpleándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.", icon:'icon3'},
     {id:"0004",
     description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedicaxtos especimen.", icon:'icon4'},
-  ]
+  ];
+
   const servicesData = [{
-    type: 'brand',
+    type: 'Diseño de Marca',
     items: [
       {
         id: "0001",
+        types: 'Diseño de Marca',
         name: 'Marca 1',
         title: 'Imagen Corporativa',
         jobs:[
@@ -247,10 +249,11 @@ export const cardsData = [
     ]
   },
   {
-    type: 'web',
+    type: 'Diseño Web',
     items: [
       {
         id: "0003",
+        types: 'Diseño Web',
         name: 'Web 1',
         title: 'Desarrollo de Sitios Web',
         jobs:[
@@ -262,7 +265,7 @@ export const cardsData = [
     ]
   },
   {
-    type: 'rrss',
+    type: 'Gestion de redes sociales',
     items: [
       {
         id: "0005",
@@ -280,7 +283,7 @@ export const cardsData = [
     ]
   },
   {
-    type: 'multimedia',
+    type: 'Diseño multimedia',
     items: [
       {
         id: "0006",
@@ -299,6 +302,102 @@ export const cardsData = [
 
 export default servicesData;
 
+export const offersData = [
+  {
+    category: 'Diseño de Marca',
+    plans: [
+      {
+        name: 'Plan Básico',
+        details: [
+          'Logotipo: Personalizado que representa la identidad de su marca.',
+          'Incluye tres propuestas de logotipo.',
+          'Se entrega en varios formatos para uso digital.',
+          'Guía de estilo: Una identidad visual básica que incluye una descripción de tipografía y paleta de color.'
+        ],
+        action: 'cotizar'
+      },
+      {
+        name: 'Plan Estándar',
+        details: [
+          'Logotipo: Personalizado que representa la identidad de su marca.',
+          'Incluye tres propuestas de logotipo.',
+          'Se entrega en varios formatos para uso digital.',
+          'Manual de marca: PDF con una descripción de los elementos de su identidad visual y su uso.',
+          'Portafolio: PDF que presenta su marca y sus productos o servicios.',
+          'Guía de estilo: PDF con instrucciones para la utilización de su identidad visual en los diferentes canales de comunicación.'
+        ],
+        action: 'cotizar'
+      },
+      {
+        name: 'Plan Premium',
+        details: [
+          'Logotipo: Personalizado que representa la identidad de su marca.',
+          'Incluye tres propuestas de logotipo.',
+          'Se entrega en varios formatos para uso digital.',
+          'Manual de marca: PDF con una descripción de los elementos de su identidad visual y su uso.',
+          'Portafolio: PDF que presenta su marca y sus productos o servicios.',
+          'Guía de estilo: PDF con instrucciones para la utilización de su identidad visual en los diferentes canales de comunicación.',
+          'Estrategia de marca: Un documento que define los objetivos y la personalidad de su marca.',
+          'Asesoría de 2hr de plan de marketing: Un documento que describe cómo comunicará su marca a su público objetivo.'
+        ],
+        action: 'cotizar'
+      }
+    ]
+  },
+  {
+    category: 'Diseño Web',
+    plans: [
+      {
+        name: 'Landing Pages',
+        details: [
+          'Dominio y hosting incluido.',
+          '1 Página de aterrizaje',
+          'Diseño personalizado',
+          'Secciones de páginas animadas',
+          'Diseño adaptable a dispositivos móviles',
+          'Analytics basic(Informes básicos, Informes de tráfico, Informes de contenido, informes de conversiones)',
+          'Imágenes de stock',
+          'Integración con redes sociales'
+        ],
+        action: 'cotizar'
+      },
+      {
+        name: 'Diseño Web Corporativo',
+        details: [
+          'Dominio y hosting incluido.',
+          '5-6 páginas en el sitio',
+          'Diseño personalizado',
+          'Secciones de páginas animadas',
+          'Diseño adaptable a dispositivos móviles',
+          'Analytics basic',
+          'Imágenes de stock',
+          'E-commerce',
+          'SEO optimizado',
+          'Integración con redes sociales'
+        ],
+        action: 'cotizar'
+      },
+      {
+        name: 'Diseño Web Empresarial',
+        details: [
+          'Dominio y hosting incluido',
+          '6-10 páginas en el sitio',
+          'Diseño personalizado',
+          'Animación completa',
+          'Diseño receptivo',
+          'Analytics basic',
+          'Imágenes de stock ilimitadas',
+          'E-commerce',
+          'SEO optimizado',
+          'Integración con redes sociales',
+          'Módulos personalizados',
+          'CMS blog y noticias'
+        ],
+        action: 'cotizar'
+      }
+    ]
+  }
+];
   export const navItems = [
     {
         id:'1',

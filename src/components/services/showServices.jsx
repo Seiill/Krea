@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useState} from 'react';
+import Offers from '../../offers/offers';
 import { ShowContainer, SectionContainer, GridContainer, ViewFeatures, H3, P, Img, IfContainer, Title, ImageContainer, ImageGrid, ImageWrapper} from './navElements';
 
 import image from '../../assets/services-selected-03.svg';
@@ -30,6 +31,8 @@ import jedanRrss3 from '../../assets/rrss2-80.jpg';
 import jedanBrand from '../../assets/jedan-brand.svg';
 import jedanLogo from '../../assets/jedan-logo.svg';
 import jedanCard from '../../assets/jedan-card.svg';
+
+
 const imageMap = {
   'bsa-brand': bsaBrand,
   'bsa-logo': bsaLogo,
@@ -60,8 +63,16 @@ const importImages = (imageNames) => {
 };
 
 const ShowServices = ({ selectedService }) => {
-  console.log("selectedService en ShowServices:", selectedService);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+  
   if (!selectedService) {
     return (
       <IfContainer>
@@ -70,7 +81,7 @@ const ShowServices = ({ selectedService }) => {
       </IfContainer>
     );
   }
-
+  console.log("Valor de selectedService.types:", selectedService.types);
   return (
     <ShowContainer>
       <SectionContainer >
@@ -93,7 +104,9 @@ const ShowServices = ({ selectedService }) => {
           </GridContainer>
         ))}
       </SectionContainer>
-      <ViewFeatures style={{ position: 'fixed', bottom: '100px', right: '34px'}}>Ver Planes</ViewFeatures>
+      <ViewFeatures onClick={openModal} style={{ position: 'fixed', bottom: '100px', right: '34px'}}>Ver Planes</ViewFeatures>
+      {isModalOpen && <Offers category={selectedService.types} onClose={closeModal} />} 
+    
     </ShowContainer>
   );
 };

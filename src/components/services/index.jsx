@@ -8,7 +8,6 @@ const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
 
   const handleSelectService = (id) => {
-    console.log("ID seleccionado:", id);
     const selectedServiceItem = servicesData.flatMap(section => section.items).find(item => item.id === id);
 
     if (selectedServiceItem) {
@@ -17,12 +16,11 @@ const Services = () => {
       console.error("No se encontró ningún servicio con el ID:", id);
     }
   };
-  console.log("selectedService en Services:", selectedService);
 
   return (
     <>
       <NavServices services={servicesData} onSelectService={handleSelectService} />
-      <ShowServices selectedService={selectedService} /* servicesData={servicesData} */ />
+      <ShowServices selectedService={selectedService}  />
     </>
   );
 };

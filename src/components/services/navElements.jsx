@@ -96,6 +96,7 @@ justify-content: space-evenly;
 align-items: center;
 `
 export const ViewFeatures = styled.button`
+
 width: fit-content;
 padding: 1rem 3rem; 
 background-color: ${variables.secondColor};
