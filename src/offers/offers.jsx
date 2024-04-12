@@ -1,50 +1,48 @@
 import React from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { offersData } from '../data';
-
 import {
-    TitleContainer,
-    CategoryTitle,
-    PlansContainer,
-    PlanCard,
-    PlanTitle,
-    PlanDetails,
-    PlanDetail,
-    ActionButton,
-    ModalBackground,
-    ModalContent,
-    CloseButton,
-  } from './offersElements';
+  TitleContainer,
+  CategoryTitle,
+  PlansContainer,
+  PlanCard,
+  PlanTitle,
+  PlanDetails,
+  PlanDetail,
+  ActionButton,
+} from './offersElements';
 
+const Offers = () => {
+  const { category } = useParams();
+  const navigate = useNavigate();
 
-const Offers = ({ category, onClose }) => {
-     const categoryOffers = offersData.find((offerData) => offerData.category === category);
-    console.log(categoryOffers);
-    if (!categoryOffers) {
-        return <div>No hay ofertas disponibles para esta categoría.</div>; 
-      } 
+  const categoryOffers = offersData.find((offerData) => offerData.category === category);
+
+  if (!categoryOffers) {
+    return <div>No hay ofertas disponibles para esta categoría.</div>;
+  }
+
   return (
-    <ModalBackground onClick={onClose}>
-      <ModalContent onClick={(e) => e.stopPropagation()}>
-      
+    <>
       <CategoryTitle>{categoryOffers.category}</CategoryTitle>
       <PlansContainer>
-            {categoryOffers.plans.map((plan) => (
-              <PlanCard key={plan.name}>
-                <TitleContainer>
-                <PlanTitle>{plan.name}</PlanTitle>
-                </TitleContainer>
-                <PlanDetails>
-                  {plan.details.map((detail, index) => (
-                    <PlanDetail key={index}>{detail}</PlanDetail>
-                  ))}
-                </PlanDetails>
-                <ActionButton>{plan.action}</ActionButton>
-              </PlanCard>
-            ))}
-          </PlansContainer>
-        <CloseButton onClick={onClose}>Cerrar</CloseButton>
-      </ModalContent>
-    </ModalBackground>
+        {categoryOffers.plans.map((plan, index) => (
+          <PlanCard key={plan.name} index={index}>
+            <TitleContainer index={index}>
+              <PlanTitle>{plan.name}</PlanTitle>
+            </TitleContainer>
+            <PlanDetails>
+              {plan.details.map((detail, index) => (
+                <PlanDetail key={index}>{detail}</PlanDetail>
+              ))}
+            </PlanDetails>
+            <ActionButton index={index} onClick={() => navigate(`/services/${category}/${plan.name}`)}>
+              {plan.action}
+            </ActionButton>
+          </PlanCard>
+        ))}
+      </PlansContainer>
+    </>
   );
 };
 

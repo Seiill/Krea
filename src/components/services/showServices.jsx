@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {useNavigate} from 'react-router-dom'
 import Offers from '../../offers/offers';
 import { ShowContainer, SectionContainer, GridContainer, ViewFeatures, H3, P, Img, IfContainer, Title, ImageContainer, ImageGrid, ImageWrapper} from './navElements';
 
@@ -63,16 +64,10 @@ const importImages = (imageNames) => {
 };
 
 const ShowServices = ({ selectedService }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => {
-    setIsModalOpen(true);
+  const navigate = useNavigate();
+  const openOffers = () => {
+    navigate(`/services/${selectedService.types}`);
   };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-  
   if (!selectedService) {
     return (
       <IfContainer>
@@ -81,7 +76,6 @@ const ShowServices = ({ selectedService }) => {
       </IfContainer>
     );
   }
-  console.log("Valor de selectedService.types:", selectedService.types);
   return (
     <ShowContainer>
       <SectionContainer >
@@ -104,8 +98,7 @@ const ShowServices = ({ selectedService }) => {
           </GridContainer>
         ))}
       </SectionContainer>
-      <ViewFeatures onClick={openModal} style={{ position: 'fixed', bottom: '100px', right: '34px'}}>Ver Planes</ViewFeatures>
-      {isModalOpen && <Offers category={selectedService.types} onClose={closeModal} />} 
+      <ViewFeatures onClick={openOffers} style={{ position: 'fixed', bottom: '100px', right: '34px'}}>Ver Planes</ViewFeatures>
     
     </ShowContainer>
   );

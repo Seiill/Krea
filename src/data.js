@@ -229,7 +229,8 @@ export const cardsData = [
     description:"Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedicaxtos especimen.", icon:'icon4'},
   ];
 
-  const servicesData = [{
+  const servicesData = [
+    {
     type: 'Diseño de Marca',
     items: [
       {
@@ -270,6 +271,7 @@ export const cardsData = [
       {
         id: "0005",
         name: 'Redes Sociales 1',
+        types: 'Gestion de redes sociales',
         title: 'Gestión de Redes Sociales',
         jobs:[{description: 'Potencia tu marca en el mundo digital con nuestras estrategias de redes sociales. Desarrollamos contenido estratégico que fortalece tu presencia y conecta de manera significativa con tu audiencia. ¡Haz que tu marca destaque! 🚀',
         images: ['rrss3', 'rrss2', 'rrss1'],},
@@ -394,9 +396,47 @@ export const offersData = [
           'CMS blog y noticias'
         ],
         action: 'cotizar'
+      },
+    ]
+  },
+  {
+    category: 'Gestion de redes sociales',
+    plans: [
+      {
+        name: "Plan Básico",
+        details: [
+          "Descripción: Creación y programación de contenido básico para una red social (por ejemplo, Facebook, Instagram, Twitter).",
+          "Publicaciones regulares (2-3 publicaciones por semana).",
+          "Monitoreo de la comunidad y respuesta a comentarios básicos.",
+          "Informes básicos de rendimiento (número de seguidores, alcance, interacciones).",
+        ],
+        action: "cotizar"
+      },
+      {
+        name: "Plan Empresarial",
+        details: [
+          "Descripción: Creación y programación de contenido diversificado para múltiples redes sociales (por ejemplo, Facebook, Instagram, Twitter, LinkedIn).",
+          "Publicaciones regulares (3-5 publicaciones por semana en cada plataforma).",
+          "Monitoreo proactivo de la comunidad y respuesta a comentarios y mensajes.",
+          "Creación de estrategias de contenido y calendarios editoriales.",
+          "Informes detallados de rendimiento (análisis de contenido, crecimiento de seguidores, alcance, interacciones).",
+        ],
+        action: "cotizar"
+      },
+      {
+        name: "Plan Premium",
+        details: [
+          "Descripción: Creación y programación de contenido altamente personalizado y creativo para varias redes sociales (por ejemplo, Facebook, Instagram, Twitter, LinkedIn, YouTube).",
+          "Publicaciones frecuentes y estratégicas (5-7 publicaciones por semana en cada plataforma).",
+          "Monitoreo activo de la comunidad y gestión completa de comentarios y mensajes, incluyendo atención al cliente.",
+          "Desarrollo e implementación de campañas publicitarias pagadas en redes sociales.",
+          "Estrategias avanzadas de crecimiento de seguidores y compromiso.",
+          "Informes completos de análisis de rendimiento con recomendaciones estratégicas.",
+        ],
+        action: "cotizar"
       }
     ]
-  }
+  },
 ];
   export const navItems = [
     {

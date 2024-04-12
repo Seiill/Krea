@@ -9,6 +9,8 @@ import { Main } from './components/Styled-Components/main';
 import ContactUs from './pages/contactUs';
 import Jedan from './pages/jedan-process-brand-construction';
 import WhatsappButton from './components/whatsapp';
+import OfferPage from './pages/offerPage';
+import Footer from './footer';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,9 +30,12 @@ function App() {
             <Route path="/aboutUs" element={<About />} exact />
             <Route path='/contactUs' element={<ContactUs />} exact/>
             <Route path='/jedan-process-brand-construction' element={<Jedan/>} exact/>
+            <Route path="/services/:category" element={<OfferPage />} />
           </Routes>
           <WhatsappButton phoneNumber="3194526834" message="Hola, ¡me interesa obtener una cotización de sus servicios! ¿Podrían proporcionarme más detalles sobre...? ¡Gracias!" /> 
+          <Footer />
         </Router>
+        
       </Main>
     </>
   );
