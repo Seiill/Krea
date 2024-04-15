@@ -5,13 +5,13 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios'; 
 import Image from '../../assets/contact-img.svg';
 import { variables } from '../Styled-Components/themMode';
-import { mobile, tablet } from '../Styled-Components/Responsive';
-import { getCsrfToken } from '../../utilities/csrf';
+import { tablet } from '../Styled-Components/Responsive';
 
 
 const ContactForm = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
   const [isVisible, setIsVisible] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
@@ -38,23 +38,26 @@ const ContactForm = () => {
 
   const onSubmit = async (data) => {
     try {
-      // Obtener el token CSRF
-      const response = await axios.get('http://localhost:8000/back-krea/csrf-token');
+      const response = await axios.get('http://localhost:8000/csrf-token');
       const token = response.data.token;
-  
-      // Enviar la solicitud POST con el token CSRF
+      console.log('token:', token)
       const headers = { 'X-CSRF-TOKEN': token };
-      await axios.post('http://localhost:8000/back-krea/submit-contact-form', data, { headers });
+      await axios.post('http://localhost:8000/submit-contact-form', data, { headers });
 
-  
       console.log('Formulario enviado correctamente');
-      console.log("data envida",response.data);
+      console.log("data enviada",response.data);
+      setFormSubmitted(true);
     } catch (error) {
       console.error('Error al enviar el formulario:', error);
     }
   };
   
-  
+  const handleReset = () => {
+    if (formSubmitted) {
+      reset(); // Resetear el formulario solo si fue enviado correctamente
+      setFormSubmitted(false); // Restablecer el estado de formSubmitted a falso
+    }
+  };
 
   return (
     <Container ref={ref}>
