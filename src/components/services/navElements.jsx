@@ -2,15 +2,15 @@ import styled from 'styled-components';
 import { variables } from '../Styled-Components/themMode';
 import { mobile, tablet } from '../Styled-Components/Responsive';
 
-export const Nav = styled.nav`
-  position: sticky;
-  top: 
-  display: flex;
-  height: 60px;
-  width: 100%;
-  max-width: 1280px;
-  justify-content: space-around;
-  z-index: 2;
+  export const Nav = styled.nav`
+    position: sticky;
+    top: 70px;
+    display: flex;
+    min-height: 60px;
+    width: 100%;
+    max-width: 1280px;
+    justify-content: space-around;
+    z-index: 2;
 
   ${mobile({
     flexWrap: "wrap",
@@ -38,6 +38,31 @@ font-family: 'DINAlternate';
   })}
 `;
 
+export const MobileNav = styled.div`
+  position: relative;
+`;
+
+export const ButtonToggle = styled.button`
+  width: 100%;
+  height: 2.5rem;
+  font-family: 'DINAlternate';
+  background-color: ${variables.bgColor};
+  border: none;
+  color: ${variables.primaryColor};
+  border-radius: 0 0 15px 15px;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+
+  &:hover {
+    color: ${variables.secondColor};
+    font-weight: ${variables.mediumBoldFont};
+    border: none;
+    transform: scale(1.05);
+  }
+`;
 
 
 export const H1 = styled.h1`
@@ -132,17 +157,10 @@ export const Img = styled.img`
   width: 100%;
   max-height: 650px;
   object-fit: cover;
-  
-  ${mobile({
-    height: '100vh',
-    objectPosition: 'center',
-    marginTop: '50px',
-  })}
-  ${tablet({
-    height: '100vh',
-    objectPosition: 'center',
-    marginTop: '50px',
 
+  ${tablet({
+    height: 'auto',
+    objectPosition: 'center',
   })}
 `;
 
@@ -165,6 +183,14 @@ export const ImageGrid = styled.div`
 display: grid;
   grid-template-columns:  1fr 2fr;
   gap: 10px; 
+  justify-items: center;
+
+  ${tablet({
+    gridTemplateColumns: "1fr",
+    gap: "0px", 
+    margin: '0 auto',
+    overflow: 'hidden',
+  })}
 `;
 export const ButtonContainer = styled.div`
 position: absolute;
@@ -229,4 +255,7 @@ width: 100%;
 max-width: 1280px;
 margin: auto;
 `
-export const SectionContainer= styled.section``
+export const SectionContainer= styled.section`
+width: 90%;
+margin: 0 auto;
+`

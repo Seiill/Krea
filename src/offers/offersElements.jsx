@@ -39,6 +39,7 @@ export const PlansContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   padding-bottom: 2rem;
+  row-gap: 1rem;
 `;
 
 export const PlanCard = styled.div`
@@ -81,7 +82,7 @@ export const PlanDetail = styled.li`
 
 export const ActionButton = styled.button`
   background-color: transparent;
-  color:  ${({ index }) =>
+  color: ${({ index }) =>
   index % 2 === 0 ? variables.secondColor : variables.primaryColor };
   font-size: ${variables.mediumFont};
   font-weight: ${variables.mediumBoldFont};

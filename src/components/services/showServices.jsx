@@ -72,7 +72,7 @@ const ShowServices = ({ selectedService }) => {
     return (
       <IfContainer>
         <H3>Te invitamos a elegir el servicio que desees conocer</H3>
-        <Img src={image} alt="Ilustración de una niña seleccionando opciones de un menú de servicios, RRSS, Diseño web, Branding y Multimedia" />
+        <Img style={{height: '100vh'}} src={image} alt="Ilustración de una niña seleccionando opciones de un menú de servicios, RRSS, Diseño web, Branding y Multimedia" />
       </IfContainer>
     );
   }

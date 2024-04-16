@@ -1,9 +1,11 @@
-// Services.jsx
+
 import React, { useState } from 'react';
 import NavServices from './navServices';
 import ShowServices from './showServices';
 import servicesData from '../../data';
-
+import NavServicesMobile from './navServicesMobile';
+import styled from 'styled-components'
+import { tablet } from '../Styled-Components/Responsive';
 const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
 
@@ -19,10 +21,27 @@ const Services = () => {
 
   return (
     <>
-      <NavServices services={servicesData} onSelectService={handleSelectService} />
+      <DesktopMenu>
+        <NavServices services={servicesData} onSelectService={handleSelectService} />
+      </DesktopMenu>
+      <MobileMenu>
+        <NavServicesMobile services={servicesData} onSelectService={handleSelectService} />
+      </MobileMenu>
       <ShowServices selectedService={selectedService}  />
     </>
   );
 };
 
 export default Services;
+
+const DesktopMenu = styled.div`
+  ${tablet({
+    display: none,
+  })}
+`;
+
+const MobileMenu = styled.div`
+${tablet({
+  display: block,
+})}
+`;
