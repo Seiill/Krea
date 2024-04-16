@@ -35,13 +35,16 @@ const Services = () => {
 export default Services;
 
 const DesktopMenu = styled.div`
+display: block;
   ${tablet({
-    display: none,
+    display: 'none',
   })}
 `;
 
 const MobileMenu = styled.div`
+
+display: none;
 ${tablet({
-  display: block,
+  display: 'block',
 })}
 `;

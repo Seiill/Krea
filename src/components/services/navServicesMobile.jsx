@@ -9,7 +9,10 @@ const NavServicesMobile = ({ services, onSelectService }) => {
   const handleToggle = () => {
     setIsExpanded(!isExpanded);
   };
-
+  const handleClickService = (serviceId) => {
+    onSelectService(serviceId); 
+    setIsExpanded(false); 
+  };
   return (
     <MobileNav>
       <ButtonToggle onClick={handleToggle}>
@@ -18,7 +21,7 @@ const NavServicesMobile = ({ services, onSelectService }) => {
       {isExpanded && (
         <Nav>
           {services.flatMap(section => section.items).map((service) => (
-            <ButtonServices key={service.id} onClick={() => onSelectService(service.id)}>
+            <ButtonServices key={service.id} onClick={() => handleClickService(service.id)}>
               {service.title}
             </ButtonServices>
           ))}
@@ -31,25 +34,36 @@ const NavServicesMobile = ({ services, onSelectService }) => {
 export default NavServicesMobile;
 
 const MobileNav = styled.div`
-  position: relative;
+width: 100%;
+display: flex;
+position: fixed;
+z-index: 12;
+top: 70px;
+row-gap: 1.2rem;
+flex-direction: column;
+align-items: center;
+background-color: ${variables.bgColor};
+
 `;
 
 const ButtonToggle = styled.button`
-  width: 100%;
+  width: fit-content;
   height: 2.5rem;
   font-family: 'DINAlternate';
-  background-color: ${variables.bgColor};
+  background-color: ${variables.secondColor};
   border: none;
-  color: ${variables.primaryColor};
-  border-radius: 0 0 15px 15px;
+  color: ${variables.bgColor};
+  border-radius: 15px;
   transition: all 0.3s;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 1rem;
+  padding: 1rem 2.5rem;
+  font-weight: ${variables.boldFont};
+  font-size: ${variables.smallFont};
 
   &:hover {
-    color: ${variables.secondColor};
+    color: ${variables.primaryColor};
     font-weight: ${variables.mediumBoldFont};
     border: none;
     transform: scale(1.05);

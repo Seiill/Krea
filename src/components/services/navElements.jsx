@@ -32,6 +32,7 @@ font-family: 'DINAlternate';
     font-weight: ${variables.mediumBoldFont};
     border: none;
     transform: scale(1.05);
+   
   }
   ${mobile({
     minWidth: "150px",
