@@ -28,8 +28,8 @@ import jedanRrss2 from '../../assets/jeadanrs-1.jpg';
 import jedanRrss3 from '../../assets/rrss2-80.jpg';
 
 
-import jedanBrand from '../../assets/jedan-brand.svg';
-import jedanLogo from '../../assets/jedan-logo.svg';
+import jedanBrand from '../../assets/jedan-brand.jpeg';
+import jedanLogo from '../../assets/jedan-logo.jpg';
 import jedanCard from '../../assets/jedan-card.svg';
 
 import amart1 from '../../assets/amart-1.jpg';
