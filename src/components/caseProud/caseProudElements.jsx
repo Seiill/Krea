@@ -9,11 +9,11 @@ position: relative;
   width: 100%;
   margin-top: -100vh;
   max-width: 1280px;
-  ${tablet(
+  /* ${tablet(
     {
       marginTop: "0",
     }
-  )}
+  )} */
 `;
 
 export const Wrapper = styled.div`
@@ -41,7 +41,12 @@ text-wrap: balance;
 font-size:${variables.smallFont};
 font-weight: ${variables.mediumBoldFont};
 color: ${variables.hoverPrimaryDarkColor};
-width: 80%;
+width: 80%; 
+ ${tablet(
+  {
+    textAlign: "center",
+  }
+)} 
 `;
 
 
@@ -66,7 +71,7 @@ export const Article= styled.article`
     align-items: flex-end;
     justify-content: center;
     text-align: right;
-    ${mobile({
+    ${tablet({
       width:"90%",
       alignItems:"center",
       justifyContent: "center",

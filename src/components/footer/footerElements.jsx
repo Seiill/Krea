@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { variables } from '../components/Styled-Components/themMode';
+import { variables } from '../Styled-Components/themMode';
+import {mobile, tablet } from '../Styled-Components/Responsive';
+import { GrTextAlignCenter } from 'react-icons/gr';
 
 export const StyledLink =styled(Link)`
 color: ${variables.bgColor};
@@ -26,6 +28,10 @@ justify-content: center;
 export const Title = styled.h2`
   font-size: ${variables.bigFont};
   padding: 2rem 0;
+  ${tablet({
+    fontSize: '1.3rem',
+    textAlign: 'center',
+  })}
 `;
 
 export const KreemosButton = styled.button`
@@ -40,6 +46,10 @@ export const KreemosButton = styled.button`
   &:hover {
     background-color: ${variables.hoverSecondaryDarkColor};
   }
+  ${mobile({
+    fontSize: '1.8rem',
+    width: '100%',
+  })}
 `;
 export const SocialContainer = styled.div`
 width: 100%;
@@ -48,12 +58,19 @@ display: flex;
 flex-wrap: wrap;
 justify-content: space-around;
 align-items: center;
-}
+
+${mobile({
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+})}
 `;
 export const Logo = styled.img`
 filter: brightness(0) invert(1);
-width: 5rem;
+width: 3.5rem;
 padding: 1rem 0;
+${tablet({
+  width: '2.8rem',
+})}
 `;
 
 export const SocialMedia = styled.div`

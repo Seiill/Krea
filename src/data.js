@@ -273,12 +273,12 @@ export const cardsData = [
         name: 'Redes Sociales 1',
         types: 'Gestion de redes sociales',
         title: 'Gestión de Redes Sociales',
-        jobs:[{description: 'Potencia tu marca en el mundo digital con nuestras estrategias de redes sociales. Desarrollamos contenido estratégico que fortalece tu presencia y conecta de manera significativa con tu audiencia. ¡Haz que tu marca destaque! 🚀',
+        jobs:[{description: 'Amarte Luxury Swimwear/ España - USA / Creación RRSS / Contenido',
+        images: ['amart-1', 'amart-2', 'amart-3'],},
+        {description: 'Jedan Investment Group/ USA /Creación RRSS / Contenido',
         images: ['rrss3', 'rrss2', 'rrss1'],},
-        {description: 'Potencia tu marca en el mundo digital con nuestras estrategias de redes sociales. Desarrollamos contenido estratégico que fortalece tu presencia y conecta de manera significativa con tu audiencia. ¡Haz que tu marca destaque! 🚀',
-        images: ['social-1', 'social-2', 'social-3'],},
-        {description: 'Potencia tu marca en el mundo digital con nuestras estrategias de redes sociales. Desarrollamos contenido estratégico que fortalece tu presencia y conecta de manera significativa con tu audiencia. ¡Haz que tu marca destaque! 🚀',
-        images: ['social-1', 'social-2', 'social-3'],},
+        {description: 'Social Investment Foundation / Colombia / Creación RRSS / Contenido',
+        images: ['rs-sif1', 'rs-sif2', 'rs-sif3'],},
       ]
         
       },

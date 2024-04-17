@@ -69,6 +69,11 @@ export const Grid = styled.div`
     gridTemplateColumns: '1fr',
     gridTemplateRows: '15vh 1fr 1fr',
   })}
+  ${mobile({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  })}
 `;
 
 export const Description = styled.div`

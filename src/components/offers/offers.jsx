@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { offersData } from '../data';
+import { offersData } from '../../data';
 import {
   TitleContainer,
   CategoryTitle,
@@ -36,7 +36,7 @@ const Offers = () => {
                 <PlanDetail key={index}>{detail}</PlanDetail>
               ))}
             </PlanDetails>
-            <ActionButton index={index} onClick={() => navigate(`/services/${category}/${plan.name}`)}>
+            <ActionButton index={index} onClick={() => navigate(`/contactUs`)}>
               {plan.action}
             </ActionButton>
           </PlanCard>

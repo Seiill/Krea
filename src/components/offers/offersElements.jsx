@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { variables } from '../components/Styled-Components/themMode';
+import { variables } from '../Styled-Components/themMode';
 
 export const TitleContainer = styled.div`
 width: 100%;

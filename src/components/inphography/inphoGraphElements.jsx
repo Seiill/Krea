@@ -46,7 +46,6 @@ export const Title = styled.h2`
 text-wrap: balance;
 text-align: center;
 width: 70%;
-/* margin-top: 220px; */
 padding: 1.2rem 0;
 color: ${variables.primaryColor};
 ${mobile({

@@ -1,5 +1,5 @@
 import React from 'react'
-import Offers from '../offers/offers'
+import Offers from '../components/offers/offers'
 const OfferPage = () => {
   return (
     <Offers />

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/logo.svg';
+import logo from '../../assets/logo.svg';
 import { useNavigate } from 'react-router-dom';
 import { FooterContainer,StyledLink,  Title, TitleContainer, LogoContainer, Logo, SocialContainer, SocialMedia, ContactInfo, KreemosButton } from './footerElements';
 
@@ -14,7 +14,7 @@ const Footer = () => {
     <FooterContainer>
       <TitleContainer>
         <Title>
-          ¡Quiero que <KreemosButton onClick={handleKreemosButtonClick}>KREEMOS</KreemosButton> un proyecto juntos!
+        <KreemosButton onClick={handleKreemosButtonClick}>KREEMOS</KreemosButton> un proyecto juntos !
         </Title>
       </TitleContainer>
       <SocialContainer>

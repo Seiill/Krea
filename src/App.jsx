@@ -5,7 +5,7 @@ import Navbar from './components/navBar/NavBar';
 import { Main } from './components/Styled-Components/main';
 import Sidebar from './components/sideBar/SideBar';
 import WhatsappButton from './components/whatsapp';
-import Footer from './footer/index'
+import Footer from './components/footer/index';
 const Home = lazy(() => import('./pages/home'));
 const Service = lazy(() => import('./pages/service'));
 const About = lazy(() => import('./pages/about'));

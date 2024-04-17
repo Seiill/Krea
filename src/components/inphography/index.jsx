@@ -45,7 +45,7 @@ const Infography = () => {
     const options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.4 // Cambiar el umbral a 40%
+      threshold: 0.2 // Cambiar el umbral a 40%
     };
 
     const observer = new IntersectionObserver(([entry]) => {
@@ -64,11 +64,12 @@ const Infography = () => {
   }, []);
 
   const selectInfography = (index) => {
-    setCurrentInfography(infography[index]);
-  };
-
-  const closeInfography = () => {
-    setCurrentInfography(null);
+    const selectedInfography = infography[index];
+    setCurrentInfography(selectedInfography);
+    const pdfPath = getPDFPath(selectedInfography.icon);
+    if (pdfPath) {
+      window.open(pdfPath, '_blank');
+    }
   };
 
   return (
@@ -78,9 +79,9 @@ const Infography = () => {
         {infography.map((item, index) => (
           <motion.div
             key={item.id}
-            initial={{ opacity: 0, x: -20 }} // Animación inicial desde la izquierda
+            initial={{ opacity: 0, x: -20 }} 
             animate={{ opacity: showCards ? 1 : 0, x: showCards ? 0 : -20 }} // Animación al ser visible
-            transition={{ delay: index * 0.1 }} // Retraso progresivo
+            transition={{ delay: index * 0.1 }} 
           >
             <Thumbnail onClick={() => selectInfography(index)}>
               <ImageContainer><Image src={getIconPath(item.icon)} alt={item.title} /></ImageContainer>
@@ -89,9 +90,6 @@ const Infography = () => {
           </motion.div>
         ))}
       </ConatinerThumbnail>
-      {currentInfography && (
-        <Modal onClose={closeInfography} pdfUrl={getPDFPath(currentInfography.icon)} title={currentInfography.title} />
-      )}
     </Container>
   );
 };

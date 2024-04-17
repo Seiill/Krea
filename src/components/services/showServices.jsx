@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import {useNavigate} from 'react-router-dom'
-import Offers from '../../offers/offers';
 import { ShowContainer, SectionContainer, GridContainer, ViewFeatures, H3, P, Img, IfContainer, Title, ImageContainer, ImageGrid, ImageWrapper} from './navElements';
 
 import image from '../../assets/services-selected-03.svg';
@@ -25,13 +24,21 @@ import sft2 from '../../assets/sft2.jpg';
 import sft3 from '../../assets/sft3.jpg';
 
 import jedanRrss from '../../assets/mockup-two-jedan-80.jpg';
-import jedanRrss2 from '../../assets/rrss2-80.jpg';
+import jedanRrss2 from '../../assets/jeadanrs-1.jpg';
 import jedanRrss3 from '../../assets/rrss2-80.jpg';
 
 
 import jedanBrand from '../../assets/jedan-brand.svg';
 import jedanLogo from '../../assets/jedan-logo.svg';
 import jedanCard from '../../assets/jedan-card.svg';
+
+import amart1 from '../../assets/amart-1.jpg';
+import amart2 from '../../assets/amart-2.jpg';
+import amart3 from '../../assets/amart-3.jpg';
+
+import sifrs1 from'../../assets/rs-sif1.jpg';
+import sifrs2 from'../../assets/rs-sif2.jpg';
+import sifrs3 from'../../assets/rs-sif3.jpg';
 
 
 const imageMap = {
@@ -56,6 +63,12 @@ const imageMap = {
   'rrss1': jedanRrss,
   'rrss2': jedanRrss2,
   'rrss3': jedanRrss3,
+  'amart-1': amart1,
+  'amart-2': amart2,
+  'amart-3': amart3,
+  'rs-sif1': sifrs1,
+  'rs-sif2': sifrs2,
+  'rs-sif3': sifrs3,
   
 };
 
@@ -92,7 +105,7 @@ const ShowServices = ({ selectedService }) => {
                 ))}
               </ImageWrapper>
               <ImageContainer>
-                <Img src={imageMap[job.images[2]]} alt={job.images[2]} />
+                <Img style={{height: '100%',}}src={imageMap[job.images[2]]} alt={job.images[2]} />
               </ImageContainer>
             </ImageGrid>
           </GridContainer>
