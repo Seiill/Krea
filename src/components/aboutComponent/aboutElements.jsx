@@ -3,10 +3,11 @@ import { variables } from '../Styled-Components/themMode';
 import { mobile } from '../Styled-Components/Responsive';
 export const Container = styled.div`
 width: 100%;
+max-width: 1280px;
 display: flex;
 flex-direction: column;
 align-items: center;
-color: ${variables.hoverPrimaryDarkColor}
+
 `
 export const VideoContainer = styled.section`
 display: flex;
@@ -17,8 +18,10 @@ width: 100%;
 
 `
 export const  AboutUsProfile = styled.div`
+display: flex;
 width: 100%;
-background-color: ${variables.primaryColor};
+flex-wrap: wrap;
+justify-content: space-evenly;
 `
 export const Source = styled.source`
 `
@@ -42,8 +45,8 @@ flex-direction: column;
 align-items: center;
 `
 export const TextContainer = styled.div`
-display: inline-block;
-font-family: 'DINAlternate';
+padding-top: 1.3rem;
+width: 90%;
 `
 const cursorAnimation = keyframes`
   50% {
@@ -77,6 +80,7 @@ export const Titles = styled.h2`
 font-family: 'DINAlternate';
 font-size: ${variables.bigFont};
 text-align: center;
+color: ${variables.hoverPrimaryDarkColor};
 
 `
 export const SectionContainer = styled.article`
@@ -108,8 +112,9 @@ padding: 1rem;
 text-wrap: balance;
 `
 export const ImageContainer = styled.div`
-width: 100%;
-padding: 3rem 0;
+width: 50%;
+min-width: 300px;
+padding: 1.5rem 0;
 overflow: hidden;
 `
 export const ValorSection = styled.section`
@@ -122,6 +127,7 @@ export const ValorSection = styled.section`
   width: 100%; 
   height: 100%;
   margin: 1rem auto; 
+  padding-bottom: 3rem;
 `;
 
 export const ValorCard = styled.div`
@@ -137,9 +143,10 @@ justify-content: space-between;
   overflow: hidden;
   border: solid 2px ${(props) =>
     props.$index % 2 === 0 ? variables.secondColor : variables.primaryColor};
+    
 `;
 
 export const IconContainer = styled.div`
   font-size: 2.5rem;
-  color:${variables.hoverSecondaryDarkColor}
+  color:${variables.secondColor}
 `;

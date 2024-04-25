@@ -4,9 +4,10 @@ import { GiThreeFriends } from "react-icons/gi";
 import { FaHeartbeat } from "react-icons/fa";
 import { GiHolyGrail } from "react-icons/gi";
 import { GrConnect } from "react-icons/gr";
-import descPersonas from '../../assets/profiles-image.svg'
+import descPersonas from '../../assets/profiles-image2-02.png'
+import descPersonas1 from '../../assets/profiles-image1-01.png'
 import { valorData } from '../../data';
-import name from '../../assets/logo.svg'
+import name from '../../assets/header-about.svg';
 import { Container, VideoContainer, TextContainer, Titles, SectionContainer, AboutUsProfile, PlatformSection, EstrategyContainer, Title, Image, ValorSection, ValorCard, Description, ImageContainer, TitleFirst, IconContainer} from './aboutElements';
 
 const AboutUs = () => {
@@ -38,9 +39,12 @@ const AboutUs = () => {
       <motion.div style={{ width: '100%' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <VideoContainer>
           <TextContainer>
-            <TitleFirst>Krea nuevos objetivos</TitleFirst>
+            <Image src={name}/>
           </TextContainer>
           <AboutUsProfile>
+            <ImageContainer>
+              <Image src={descPersonas1} alt="Imagen CEO KREA" />
+            </ImageContainer>
             <ImageContainer>
               <Image src={descPersonas} alt="Imagen CEO KREA" />
             </ImageContainer>

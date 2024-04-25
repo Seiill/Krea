@@ -5,7 +5,7 @@ import Navbar from './components/navBar/NavBar';
 import { Main } from './components/Styled-Components/main';
 import Sidebar from './components/sideBar/SideBar';
 import WhatsappButton from './components/whatsapp';
-import Footer from './components/footer/index';
+const Footer =lazy(()=> import ('./components/footer/index'));
 const Home = lazy(() => import('./pages/home'));
 const Service = lazy(() => import('./pages/service'));
 const About = lazy(() => import('./pages/about'));
@@ -34,9 +34,10 @@ function App() {
             <Route path='/jedan-process-brand-construction' element={<Jedan/>} exact/>
             <Route path="/services/:category" element={<OfferPage />} />
           </Routes>
+          <Footer />
           </Suspense>
           <WhatsappButton phoneNumber="3194526834" message="Hola, ¡me interesa obtener una cotización de sus servicios! ¿Podrían proporcionarme más detalles sobre...? ¡Gracias!" /> 
-          <Footer />
+          
         </Router>
         
       </Main>

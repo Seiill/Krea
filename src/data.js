@@ -192,7 +192,7 @@ export const cardsData = [
     {
       id:"0002",
       title:"Integridad",
-      description:"Somos fieles a nuestros valores y principios.",
+      description:"Somos fieles a nuestros valores y principios, esenciales en nuestros negocios.",
       icon:"GiHolyGrail",
       alt:"alt"
     },
@@ -405,7 +405,7 @@ export const offersData = [
       {
         name: "Plan Básico",
         details: [
-          "Descripción: Creación y programación de contenido básico para una red social (por ejemplo, Facebook, Instagram, Twitter).",
+          "Creación y programación de contenido básico para una red social (por ejemplo, Facebook, Instagram, Twitter).",
           "Publicaciones regulares (2-3 publicaciones por semana).",
           "Monitoreo de la comunidad y respuesta a comentarios básicos.",
           "Informes básicos de rendimiento (número de seguidores, alcance, interacciones).",
@@ -415,7 +415,7 @@ export const offersData = [
       {
         name: "Plan Empresarial",
         details: [
-          "Descripción: Creación y programación de contenido diversificado para múltiples redes sociales (por ejemplo, Facebook, Instagram, Twitter, LinkedIn).",
+          "Creación y programación de contenido diversificado para múltiples redes sociales (por ejemplo, Facebook, Instagram, Twitter, LinkedIn).",
           "Publicaciones regulares (3-5 publicaciones por semana en cada plataforma).",
           "Monitoreo proactivo de la comunidad y respuesta a comentarios y mensajes.",
           "Creación de estrategias de contenido y calendarios editoriales.",
@@ -426,7 +426,7 @@ export const offersData = [
       {
         name: "Plan Premium",
         details: [
-          "Descripción: Creación y programación de contenido altamente personalizado y creativo para varias redes sociales (por ejemplo, Facebook, Instagram, Twitter, LinkedIn, YouTube).",
+          "Creación y programación de contenido altamente personalizado y creativo para varias redes sociales (por ejemplo, Facebook, Instagram, Twitter, LinkedIn, YouTube).",
           "Publicaciones frecuentes y estratégicas (5-7 publicaciones por semana en cada plataforma).",
           "Monitoreo activo de la comunidad y gestión completa de comentarios y mensajes, incluyendo atención al cliente.",
           "Desarrollo e implementación de campañas publicitarias pagadas en redes sociales.",
