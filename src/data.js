@@ -292,10 +292,11 @@ export const cardsData = [
         name: 'Multimedia 1',
         title: 'Producción de Contenido Multimedia',
         jobs:[{description: 'Dale vida a tu marca con contenido multimedia cautivador. Desde videos promocionales hasta animaciones, creamos contenido que capta la atención y deja una impresión duradera. 🎥🎬',
-        images: ['video-1', 'video-2', 'video-3'],},
+        images: ['eterno-2', 'eterno-1', 'video-1']},
         {description: 'Dale vida a tu marca con contenido multimedia cautivador. Desde videos promocionales hasta animaciones, creamos contenido que capta la atención y deja una impresión duradera. 🎥🎬',
-        images: ['video-1', 'video-2', 'video-3'],},{description: 'Dale vida a tu marca con contenido multimedia cautivador. Desde videos promocionales hasta animaciones, creamos contenido que capta la atención y deja una impresión duradera. 🎥🎬',
-        images: ['video-1', 'video-2', 'video-3'],},]
+        images: ['video-2', 'ilust-2', 'video-3']},
+        {description: 'Dale vida a tu marca con contenido multimedia cautivador. Desde videos promocionales hasta animaciones, creamos contenido que capta la atención y deja una impresión duradera. 🎥🎬',
+        images: ['video-1', 'video-2', 'video-4'],},]
         
       },
     ]

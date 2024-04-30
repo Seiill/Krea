@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {useNavigate} from 'react-router-dom'
-import { ShowContainer, SectionContainer, GridContainer, ViewFeatures, H3, P, Img, IfContainer, Title, ImageContainer, ImageGrid, ImageWrapper} from './navElements';
+import { ShowContainer, SectionContainer, GridContainer, ViewFeatures, H3, P, Img, Video, IfContainer, Title, ImageContainer, ImageGrid, ImageWrapper} from './navElements';
 
 import image from '../../assets/services-selected-03.svg';
 import bsaBrand from '../../assets/bsa-brand.svg';
@@ -40,6 +40,15 @@ import sifrs1 from'../../assets/rs-sif1.jpg';
 import sifrs2 from'../../assets/rs-sif2.jpg';
 import sifrs3 from'../../assets/rs-sif3.jpg';
 
+import video1 from '../../assets/logoEterno.mp4'
+import video2 from '../../assets/rsVideo.mp4'
+import video3 from '../../assets/ilust-3.mp4'
+import video4 from '../../assets/vidBsa.mp4'
+import eterno1 from '../../assets/eternoimage.jpg'
+import eterno2 from '../../assets/eternoimage2_1.jpg'
+import ilust1 from '../../assets/ilust-1.jpg'
+import ilust2 from '../../assets/ilust-2.jpg'
+
 
 const imageMap = {
   'bsa-brand': bsaBrand,
@@ -69,11 +78,28 @@ const imageMap = {
   'rs-sif1': sifrs1,
   'rs-sif2': sifrs2,
   'rs-sif3': sifrs3,
-  
+  'eterno-1': eterno1,
+  'eterno-2': eterno2,
+  'ilust-1': ilust1,
+  'ilust-2': ilust2,
 };
 
-const importImages = (imageNames) => {
-  return imageNames.map((imageName) => imageMap[imageName]);
+const videoMap = {
+  'video-4': video4,
+  'video-3': video3,
+  'video-2': video2,
+  'video-1': video1,
+};
+
+const importMedia = (mediaNames) => {
+  return mediaNames.map((mediaName) => {
+    if (videoMap[mediaName]) {
+      return { type: 'video', src: videoMap[mediaName] };
+    } else if (imageMap[mediaName]) {
+      return { type: 'image', src: imageMap[mediaName] };
+    }
+    return null;
+  }).filter(media => media !== null);
 };
 
 const ShowServices = ({ selectedService }) => {
@@ -85,7 +111,7 @@ const ShowServices = ({ selectedService }) => {
     return (
       <IfContainer>
         <H3>Te invitamos a elegir el servicio que desees conocer</H3>
-        <Img style={{height: '100vh'}} src={image} alt="Ilustración de una niña seleccionando opciones de un menú de servicios, RRSS, Diseño web, Branding y Multimedia" />
+        <Img style={{ height: '100vh' }} src={image} alt="Ilustración de una niña seleccionando opciones de un menú de servicios, RRSS, Diseño web, Branding y Multimedia" />
       </IfContainer>
     );
   }
@@ -98,21 +124,32 @@ const ShowServices = ({ selectedService }) => {
             <P>{job.description}</P>
             <ImageGrid>
               <ImageWrapper>
-                {importImages(job.images.slice(0, 2)).map((imageSrc, index) => (
+                {importMedia(job.images.slice(0, 2)).map((media, index) => (
                   <ImageContainer key={index}>
-                    <Img src={imageSrc} alt={job.images[index]} />
+                    {media.type === 'image' ? (
+                      <Img src={media.src} alt={job.images[index]} />
+                    ) : (
+                      <Video  autoPlay loop src={media.src} type="video/mp4" />
+                    )}
                   </ImageContainer>
                 ))}
               </ImageWrapper>
               <ImageContainer>
-                <Img style={{height: '100%',}}src={imageMap[job.images[2]]} alt={job.images[2]} />
-              </ImageContainer>
+  {job.images.length > 2 && (
+    <div>
+      { videoMap[job.images[2]] ? (
+        <Video  autoPlay loop src={videoMap[job.images[2]]} type="video/mp4" />
+      ) : (
+        <Img style={{ height: '100%' }} src={imageMap[job.images[2]]} alt={job.images[2]} />
+      )}
+    </div>
+  )}
+</ImageContainer>
             </ImageGrid>
           </GridContainer>
         ))}
       </SectionContainer>
-      <ViewFeatures onClick={openOffers} style={{ position: 'fixed', bottom: '100px', right: '34px'}}>Ver Planes</ViewFeatures>
-    
+      <ViewFeatures onClick={openOffers} style={{ position: 'fixed', bottom: '100px', right: '34px' }}>Ver Planes</ViewFeatures>
     </ShowContainer>
   );
 };

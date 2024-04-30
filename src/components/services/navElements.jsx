@@ -156,6 +156,17 @@ export const Content = styled.div`
 
 export const Img = styled.img`
   width: 100%;
+  
+  max-height: 650px;
+  object-fit: cover;
+
+  ${tablet({
+    height: 'auto',
+    objectPosition: 'center',
+  })}
+`;
+export const Video = styled.video`
+  width: 100%;
   max-height: 650px;
   object-fit: cover;
 
