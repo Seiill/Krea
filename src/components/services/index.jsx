@@ -1,11 +1,12 @@
-
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import NavServices from './navServices';
-import ShowServices from './showServices';
 import servicesData from '../../data';
 import NavServicesMobile from './navServicesMobile';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import { tablet } from '../Styled-Components/Responsive';
+
+const LazyLoadedShowServices = lazy(() => import('./showServices'));
+
 const Services = () => {
   const [selectedService, setSelectedService] = useState(null);
 
@@ -27,12 +28,15 @@ const Services = () => {
       <MobileMenu>
         <NavServicesMobile services={servicesData} onSelectService={handleSelectService} />
       </MobileMenu>
-      <ShowServices selectedService={selectedService}  />
+      <Suspense fallback={<div>Loading...</div>}>
+        <LazyLoadedShowServices selectedService={selectedService} />
+      </Suspense>
     </>
   );
 };
 
 export default Services;
+
 
 const DesktopMenu = styled.div`
 display: block;

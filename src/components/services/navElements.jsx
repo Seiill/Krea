@@ -107,9 +107,7 @@ font-weight: ${variables.regularFont};
 
 export const GridContainer = styled.div``
 export const ImageContainer = styled.figure`
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+  width: 98%;
   ${mobile({
     height: 'auto',
   })}
@@ -156,9 +154,6 @@ export const Content = styled.div`
 
 export const Img = styled.img`
   width: 100%;
-  
-  max-height: 650px;
-  object-fit: cover;
 
   ${tablet({
     height: 'auto',
@@ -167,7 +162,8 @@ export const Img = styled.img`
 `;
 export const Video = styled.video`
   width: 100%;
-  max-height: 650px;
+  min-height: 515px;
+  object-position: center;
   object-fit: cover;
 
   ${tablet({
@@ -194,7 +190,9 @@ export const ShowContainer = styled.div`
 export const ImageGrid = styled.div`
 display: grid;
   grid-template-columns:  1fr 2fr;
-  gap: 10px; 
+max-height: 515px;
+overflow: hidden;
+gap: 2px; 
   justify-items: center;
 
   ${tablet({

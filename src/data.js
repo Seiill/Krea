@@ -240,7 +240,7 @@ export const cardsData = [
         title: 'Imagen Corporativa',
         jobs:[
           {description: 'BSA - Barcelona Soccer Academy / Orlando Fl / Branding / Re branding / Diseño Grafico',
-        images: ['bsa-logo', 'bsa-card', 'bsa-brand'],},
+        images: ['bsa-card', 'bsa-logo', 'bsa-brand'],},
           {description: 'Jedan Investment Group / Orlando Fl / Branding / Diseño Web / Creación RRSS',
         images: ['jedan-brand', 'jedan-logo', 'jedan-card'],},
           {description: 'Social Investment Foundation / Colombia / Branding / Diseño Web / Creación RRSS',
@@ -291,11 +291,11 @@ export const cardsData = [
         id: "0006",
         name: 'Multimedia 1',
         title: 'Producción de Contenido Multimedia',
-        jobs:[{description: 'Dale vida a tu marca con contenido multimedia cautivador. Desde videos promocionales hasta animaciones, creamos contenido que capta la atención y deja una impresión duradera. 🎥🎬',
+        jobs:[{description: 'Eterno / Bogotá - Colombia / Creación de logotipo / Animación logotipo/ After Effects',
         images: ['eterno-2', 'eterno-1', 'video-1']},
-        {description: 'Dale vida a tu marca con contenido multimedia cautivador. Desde videos promocionales hasta animaciones, creamos contenido que capta la atención y deja una impresión duradera. 🎥🎬',
+        {description: 'Animación de presentaciones/ Animación de ilustraciones / Ilustración Digital/ After Effects',
         images: ['video-2', 'ilust-2', 'video-3']},
-        {description: 'Dale vida a tu marca con contenido multimedia cautivador. Desde videos promocionales hasta animaciones, creamos contenido que capta la atención y deja una impresión duradera. 🎥🎬',
+        {description: 'BSA- Barcelona Soccer Academy / Orlando-Florida / Motion Graphics / Animación de logo',
         images: ['video-1', 'video-2', 'video-4'],},]
         
       },

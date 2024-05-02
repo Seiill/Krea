@@ -3,11 +3,11 @@ import {useNavigate} from 'react-router-dom'
 import { ShowContainer, SectionContainer, GridContainer, ViewFeatures, H3, P, Img, Video, IfContainer, Title, ImageContainer, ImageGrid, ImageWrapper} from './navElements';
 
 import image from '../../assets/services-selected-03.svg';
-import bsaBrand from '../../assets/bsa-brand.svg';
+import bsaBrand from '../../assets/bsa-brand.jpg';
 import bsaLogo from '../../assets/bsa-logo.svg'; 
-import bsaCard from '../../assets/bsa-card.svg';
+import bsaCard from '../../assets/bsa-card.jpg';
 
-import sifBrand from '../../assets/sif-brand.svg';
+import sifBrand from '../../assets/sif-brand.jpg';
 import sifLogo from '../../assets/sif-logo.svg';
 import sifCard from '../../assets/sif-card.svg';
 
@@ -30,7 +30,7 @@ import jedanRrss3 from '../../assets/rrss2-80.jpg';
 
 import jedanBrand from '../../assets/jedan-brand.jpeg';
 import jedanLogo from '../../assets/jedan-logo.jpg';
-import jedanCard from '../../assets/jedan-card.svg';
+import jedanCard from '../../assets/jedan-card.jpg';
 
 import amart1 from '../../assets/amart-1.jpg';
 import amart2 from '../../assets/amart-2.jpg';

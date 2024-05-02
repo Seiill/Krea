@@ -38,6 +38,7 @@ import styled, { css } from 'styled-components';
     display: flex;
     flex-direction: column;
     row-gap: 10px;
+    
   `;
 
   export const ErrorMessage = styled.div`
@@ -117,6 +118,7 @@ import styled, { css } from 'styled-components';
     display: flex;
     flex-direction: column;
     transition: transform 0.5s ease-in-out;
+    padding-top: 3rem;
   `;
 
   export const Span = styled.span`
