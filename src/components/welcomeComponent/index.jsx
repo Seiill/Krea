@@ -64,14 +64,14 @@ const PreHome = () => {
   return (
     <Container>
       <DivTextStyled $scrolled={scrolled} $scrollDirection={scrollDirection} $hasScrolled={hasScrolled}>
-        <Span fontSize="2.5rem" fontFamily = 'DINAlternate'letterSpacing="5.1px">
+        <Span $mobileFontSize="1.2rem"  fontSize="2.5rem" fontFamily = 'DINAlternate'letterSpacing="5.1px">
           TRABAJAMOS JUNTOS
         </Span>
-        <Span fontFamily='DINAlternate' fontSize="3.5rem" letterSpacing="8.2px" $textShadow="-2px -2px 0 #0F2633, 2px -2px 0 #0F2633, -2px 2px 0 #0F2633, 2px 2px 0 #0F2633">
+        <Span fontFamily='DINAlternate' fontSize="3.5rem" $mobileFontSize="1.8rem" letterSpacing="8.2px" $textShadow="-2px -2px 0 #0F2633, 2px -2px 0 #0F2633, -2px 2px 0 #0F2633, 2px 2px 0 #0F2633">
           PARA HACERTE
         </Span>
-        <Wiggle fontFamily='DINAlternate'>VISIBLE</Wiggle>
-        <Span fontFamily='DINAlternate' fontSize="2.5rem" letterSpacing="3.9px" $textShadow="-2px -2px 0 #0F2633, 2px -2px 0 #0F2633, -2px 2px 0 #0F2633, 2px 2px 0 #0F2633">
+        <Wiggle fontSize='5.3rem' $mobileFontSize="2rem" fontFamily='DINAlternate'>VISIBLE</Wiggle>
+        <Span $mobileFontSize="1.4rem" fontFamily='DINAlternate' fontSize="2.5rem" letterSpacing="3.9px" $textShadow="-2px -2px 0 #0F2633, 2px -2px 0 #0F2633, -2px 2px 0 #0F2633, 2px 2px 0 #0F2633">
           EN EL MUNDO DIGITAL
         </Span>
       </DivTextStyled>

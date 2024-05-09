@@ -54,14 +54,18 @@ export const DivTextStyled = styled.div`
     height: "50vh",
   })}
 `;
-export const Span =styled.span`
-font-size: ${({ fontSize }) => fontSize || '2rem'};
-font-family: ${props => props.fontFamily};
-font-weight: bold;
-letter-spacing: ${({ letterSpacing }) => letterSpacing || '0'};
-color: ${({ $textShadow }) => ($textShadow ? variables.bgColor : variables.hoverPrimaryDarkColor)};
-text-shadow: ${({ $textShadow }) => $textShadow || 'none'}
-`
+export const Span = styled.span`
+  font-size: ${({ fontSize }) => fontSize || '2rem'};
+  font-family: ${({ fontFamily }) => fontFamily};
+  font-weight: bold;
+  letter-spacing: ${({ letterSpacing }) => letterSpacing || '0'};
+  color: ${({ $textShadow }) => ($textShadow ? variables.bgColor : variables.hoverPrimaryDarkColor)};
+  text-shadow: ${({ $textShadow }) => $textShadow || 'none'};
+
+  ${mobile({
+    fontSize: ({ $mobileFontSize }) => $mobileFontSize || 'inherit',
+  })}
+`;
 export const textShadowStyles = `
   -2px -2px 0 ${variables.hoverPrimaryDarkColor},
    2px -2px 0 ${variables.hoverPrimaryDarkColor},
@@ -71,13 +75,16 @@ export const textShadowStyles = `
 export const Wiggle = styled.span`
 color:${variables.hoverPrimaryDarkColor};
 font-family: ${props => props.fontFamily};
-font-size: 5.3rem;
+font-size: ${({ fontSize }) => fontSize || '5.3rem'};
 font-weight: 900;
 display: inline-block; 
 letter-spacing: 29.3px;
 animation: ${wiggleAnimation} 2s ease-in-out 1; 
 text-align: center;
 padding-left: 20px;
+${mobile({
+  fontSize: ({ $mobileFontSize }) => $mobileFontSize || 'inherit',
+})}
 
 `
 export const Image = styled.img`
@@ -85,6 +92,9 @@ width: 100%;
 
 object-fit: cover;
 object-position: center;
+/* ${mobile({
+  marginBottom: '4rem',
+})} */
 `
 export const DivImage = styled.div`
 display: flex;

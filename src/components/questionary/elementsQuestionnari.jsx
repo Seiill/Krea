@@ -20,7 +20,7 @@ flex-direction: column;
 align-items: center;
 row-gap: 2rem;
 ${mobile({
-  padding: '3rem',
+  padding: '8rem 0',
 })}
 `
 export const Text = styled.p`
@@ -30,6 +30,9 @@ font-weight: ${variables.boldFont};
 text-align: center;
 width: 70%;
 margin: auto;
+${mobile({
+  width: '70%',
+})}
 `
   export const ModalContent = styled.div`
     position: fixed;

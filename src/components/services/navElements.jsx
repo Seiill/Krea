@@ -103,6 +103,7 @@ color: ${variables.hoverPrimaryDarkColor};
 export const P = styled.p`
 color: ${variables.hoverPrimaryDarkColor};
 font-weight: ${variables.regularFont};
+padding: 2rem .5rem;
 `;
 
 export const GridContainer = styled.div``

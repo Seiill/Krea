@@ -116,6 +116,10 @@ width: 50%;
 min-width: 300px;
 padding: 1.5rem 0;
 overflow: hidden;
+
+${mobile({
+  width: '100%',
+})}
 `
 export const ValorSection = styled.section`
   display: grid;
