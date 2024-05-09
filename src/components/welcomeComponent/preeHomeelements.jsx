@@ -31,9 +31,7 @@ justify-content: space-between;
 ${tablet({
   flexDirection: "column",
 })}
-${mobile({
-  display: "none"
-})}
+
 
 `
 export const DivTextStyled = styled.div`

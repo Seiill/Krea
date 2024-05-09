@@ -2,7 +2,10 @@ import styled from "styled-components";
 import { variables } from "../../Styled-Components/themMode";
 import {mobile, tablet } from "../../Styled-Components/Responsive";
 export const Container = styled.section`
-width: 100%
+width: 100%;
+${mobile({
+  marginTop: '-85vh',
+})}
 `
 export const GridContainer = styled.div`
   display: grid;

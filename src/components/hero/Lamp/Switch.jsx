@@ -13,7 +13,7 @@ ${tablet({
   bottom: "28%",
 })}
 ${mobile({
-  bottom: "67%",
+  bottom: "129%",
 
 })}
 `;

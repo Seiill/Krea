@@ -4,7 +4,7 @@ import { GiThreeFriends } from "react-icons/gi";
 import { FaHeartbeat } from "react-icons/fa";
 import { GiHolyGrail } from "react-icons/gi";
 import { GrConnect } from "react-icons/gr";
-import descPersonas from '../../assets/profiles-image2-02.png'
+import descPersonas from '../../assets/profiles-image2-02_1.png'
 import descPersonas1 from '../../assets/profiles-image1-01.png'
 import { valorData } from '../../data';
 import name from '../../assets/header-about.svg';

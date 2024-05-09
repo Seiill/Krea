@@ -3,8 +3,9 @@ import { useForm, Controller } from 'react-hook-form';
 import { questions } from '../../data';
 import Toast from '../Styled-Components/toast';
 import { IoIosSend } from "react-icons/io";
+import { FaAngleDoubleDown } from "react-icons/fa";1
 import { useNavigate } from 'react-router-dom';
-
+import styled, { keyframes } from 'styled-components';
 import { 
   Question,
   Button,
@@ -16,11 +17,30 @@ import {
   InputContainer,
   Span, 
   Input, 
+  GuestToForm,
+  Text,
   TextArea, 
   ButtonContainer, 
   ErrorMessage 
 } from './elementsQuestionnari';
+import { variables } from '../Styled-Components/themMode';
 
+const iconAnimation = keyframes`
+  0% {
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+`;
+const AnimatedIcon = styled(FaAngleDoubleDown)`
+margin-top: 3rem;
+font-size:2rem;
+color: ${variables.secondColor};
+  animation: ${iconAnimation} 2s ease-out forwards 5; 
+`;
 const QuestionnaireForm = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const { control, handleSubmit, setValue, getValues, formState: { errors }, register, reset } = useForm();
@@ -127,9 +147,13 @@ const navigate = useNavigate();
     handleQuestionChange(currentQuestion, 'prev');
     hideToast();
   };
-
+  
   return (
     <Container>
+      <GuestToForm>
+        <Text>¿Quieres impulsar tu negocio en el mundo digital? ¡Este cuestionario te ayudará! Descubre rápidamente el estado de tu empresa en el mundo digital. ¡Conoce tus oportunidades de mejora y destaca en línea! ¡Comienza ahora!"</Text>
+        <AnimatedIcon />
+      </GuestToForm>
       <Form onSubmit={handleSubmit(onSubmit)}>
         {questions.map((question, index) => (
           <div key={question.id} style={{ display: index === currentQuestion ? 'block' : 'none' }}>

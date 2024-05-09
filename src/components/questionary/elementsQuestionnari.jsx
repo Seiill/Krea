@@ -8,10 +8,29 @@ import styled, { css } from 'styled-components';
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Opacidad del fondo */
+    background-color: rgba(0, 0, 0, 0.9);
     display: ${({ show }) => (show ? 'block' : 'none')};
   `;
-
+export const GuestToForm = styled.span`
+display: flex;
+width: 100%;
+color: ${variables.primaryColor};
+padding: 7rem 0;
+flex-direction: column;
+align-items: center;
+row-gap: 2rem;
+${mobile({
+  padding: '3rem',
+})}
+`
+export const Text = styled.p`
+text-wrap: balance;
+font-size: 1.4rem;
+font-weight: ${variables.boldFont};
+text-align: center;
+width: 70%;
+margin: auto;
+`
   export const ModalContent = styled.div`
     position: fixed;
     top: 50%;
