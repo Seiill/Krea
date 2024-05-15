@@ -191,7 +191,7 @@ export const ShowContainer = styled.div`
 export const ImageGrid = styled.div`
 display: grid;
   grid-template-columns:  1fr 2fr;
-max-height: 515px;
+max-height: 520px;
 overflow: hidden;
 gap: 2px; 
   justify-items: center;
@@ -201,6 +201,7 @@ gap: 2px;
     gap: "0px", 
     margin: '0 auto',
     overflow: 'hidden',
+    maxHeight: '100%',
   })}
 `;
 export const ButtonContainer = styled.div`
