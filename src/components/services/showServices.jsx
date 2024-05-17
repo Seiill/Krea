@@ -21,7 +21,7 @@ import eWeb3 from '../../assets/e-web3.jpg';
 
 import sft1 from '../../assets/sft1.jpg';
 import sft2 from '../../assets/sft2.jpg';
-import sft3 from '../../assets/sft3.jpg';
+import sft3 from '../../assets/Luxury.mp4';
 
 import jedanRrss from '../../assets/mockup-two-jedan-80.jpg';
 import jedanRrss2 from '../../assets/jeadanrs-1.jpg';
@@ -68,7 +68,7 @@ const imageMap = {
   'e-web3': eWeb3,
   'sft1': sft1,
   'sft2': sft2,
-  'sft3': sft3,
+  
   'rrss1': jedanRrss,
   'rrss2': jedanRrss2,
   'rrss3': jedanRrss3,
@@ -89,6 +89,7 @@ const videoMap = {
   'video-3': video3,
   'video-2': video2,
   'video-1': video1,
+  'sft3': sft3,
 };
 
 const importMedia = (mediaNames) => {
