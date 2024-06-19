@@ -7,11 +7,10 @@ position: relative;
   display: flex;
   align-items: center;
   width: 100%;
-  margin-top: -100vh;
   max-width: 1280px;
   ${tablet(
     {
-      marginTop: "0",
+      
     }
   )}
 `;

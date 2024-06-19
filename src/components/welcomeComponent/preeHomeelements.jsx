@@ -20,12 +20,13 @@ const wiggleAnimation = keyframes`
 
 
 export const Container = styled.div`
-display: flex;
-flex-direction: row;
-flex-wrap: nowrap;
-width: 100%;
+position: relative;
 height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
 overflow: hidden;
+background-color: #f0f0f0;
 
 justify-content: space-between;
 ${tablet({
@@ -35,19 +36,15 @@ ${tablet({
 
 `
 export const DivTextStyled = styled.div`
-  position: relative;
-  z-index: 2;
-  width: 50%;
+
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 2px;
-  background-color: ${variables.bgColor};
-  opacity: ${({ $hasScrolled }) => ($hasScrolled ? '0' : '1')};
-  transform: translateY(${({ $scrolled, $scrollDirection }) =>
-    $scrolled && $scrollDirection === 'down' ? '-100%' : '0'});
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 1s ease, opacity 1s ease;
   ${tablet({
     width: "100%",
     backgroundColor: `${variables.bgColor}`,
@@ -57,6 +54,7 @@ export const DivTextStyled = styled.div`
 export const Span = styled.span`
   font-size: ${({ fontSize }) => fontSize || '2rem'};
   font-family: ${({ fontFamily }) => fontFamily};
+  
   font-weight: bold;
   letter-spacing: ${({ letterSpacing }) => letterSpacing || '0'};
   color: ${({ $textShadow }) => ($textShadow ? variables.bgColor : variables.hoverPrimaryDarkColor)};
@@ -97,21 +95,10 @@ object-position: center;
 })} */
 `
 export const DivImage = styled.div`
-display: flex;
-  position: relative;
-  z-index: 3;
-  width: 50%;
-  background-color: ${variables.bgColor};
-  transform: translateX(${({ $scrolled, $scrollDirection }) =>
-    $scrolled && $scrollDirection === 'down' ? '687px' : '0'});
-  transition: transform 0.5s ease;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: ${({ $hasScrolled }) => ($hasScrolled ? '0' : '1')};
-  transform: translateY(${({ $scrolled, $scrollDirection }) =>
-    $scrolled && $scrollDirection === 'down' ? '100%' : '0'});
-  transition: transform 0.5s ease, opacity 0.5s ease;
+    flex: 1;
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 1s ease, opacity 1s ease;
   ${tablet({
     width: "100%",
     backgroundColor: `${variables.bgColor}`,

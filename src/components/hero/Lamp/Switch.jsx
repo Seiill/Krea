@@ -10,10 +10,10 @@ left: 50%;
     align-items: center;
     justify-content: center;
 ${tablet({
-  bottom: "28%",
+  bottom: "18%",
 })}
 ${mobile({
-  bottom: "129%",
+  bottom: "110%",
 
 })}
 `;

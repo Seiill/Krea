@@ -14,6 +14,9 @@ export const FooterContainer = styled.footer`
   background-color: ${variables.hoverPrimaryDarkColor};
   color: ${variables.bgColor};
   padding: 1.5rem;
+  ${mobile({
+    height: '90vh',
+  })}
 `;
 export const LogoContainer= styled.div`
 display: flex;

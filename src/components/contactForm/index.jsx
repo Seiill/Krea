@@ -54,8 +54,8 @@ const ContactForm = () => {
   
   const handleReset = () => {
     if (formSubmitted) {
-      reset(); // Resetear el formulario solo si fue enviado correctamente
-      setFormSubmitted(false); // Restablecer el estado de formSubmitted a falso
+      reset(); 
+      setFormSubmitted(false);
     }
   };
 

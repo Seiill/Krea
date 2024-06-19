@@ -155,8 +155,9 @@ export const Content = styled.div`
 
 export const Img = styled.img`
   width: 100%;
-
+  object-fit: cover;
   ${tablet({
+    margin:'auto !important',
     height: 'auto',
     objectPosition: 'center',
   })}

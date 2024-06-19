@@ -37,20 +37,16 @@ const getPDFPath = (iconName) => {
 };
 
 const Infography = () => {
-  const [currentInfography, setCurrentInfography] = useState(null);
-  const [showCards, setShowCards] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
   useEffect(() => {
-    const options = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.2 // Cambiar el umbral a 40%
-    };
-
-    const observer = new IntersectionObserver(([entry]) => {
-      setShowCards(entry.isIntersecting);
-    }, options);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.2 }
+    );
 
     if (ref.current) {
       observer.observe(ref.current);
@@ -65,7 +61,6 @@ const Infography = () => {
 
   const selectInfography = (index) => {
     const selectedInfography = infography[index];
-    setCurrentInfography(selectedInfography);
     const pdfPath = getPDFPath(selectedInfography.icon);
     if (pdfPath) {
       window.open(pdfPath, '_blank');
@@ -79,9 +74,9 @@ const Infography = () => {
         {infography.map((item, index) => (
           <motion.div
             key={item.id}
-            initial={{ opacity: 0, x: -20 }} 
-            animate={{ opacity: showCards ? 1 : 0, x: showCards ? 0 : -20 }} // Animación al ser visible
-            transition={{ delay: index * 0.1 }} 
+            initial={{ opacity: 0, x: -20 }}
+            animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+            transition={{ delay: index * 0.1 }}
           >
             <Thumbnail onClick={() => selectInfography(index)}>
               <ImageContainer><Image src={getIconPath(item.icon)} alt={item.title} /></ImageContainer>

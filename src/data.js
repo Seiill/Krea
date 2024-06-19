@@ -289,6 +289,7 @@ export const cardsData = [
     items: [
       {
         id: "0006",
+        types: 'Diseño multimedia',
         name: 'Multimedia 1',
         title: 'Producción de Contenido Multimedia',
         jobs:[{description: 'Eterno / Bogotá - Colombia / Creación de logotipo / Animación logotipo/ After Effects',
@@ -400,45 +401,88 @@ export const offersData = [
       },
     ]
   },
-  {
-    category: 'Gestion de redes sociales',
-    plans: [
-      {
-        name: "Plan Básico",
-        details: [
-          "Creación y programación de contenido básico para una red social (por ejemplo, Facebook, Instagram, Twitter).",
-          "Publicaciones regulares (2-3 publicaciones por semana).",
-          "Monitoreo de la comunidad y respuesta a comentarios básicos.",
-          "Informes básicos de rendimiento (número de seguidores, alcance, interacciones).",
-        ],
-        action: "cotizar"
-      },
-      {
-        name: "Plan Empresarial",
-        details: [
-          "Creación y programación de contenido diversificado para múltiples redes sociales (por ejemplo, Facebook, Instagram, Twitter, LinkedIn).",
-          "Publicaciones regulares (3-5 publicaciones por semana en cada plataforma).",
-          "Monitoreo proactivo de la comunidad y respuesta a comentarios y mensajes.",
-          "Creación de estrategias de contenido y calendarios editoriales.",
-          "Informes detallados de rendimiento (análisis de contenido, crecimiento de seguidores, alcance, interacciones).",
-        ],
-        action: "cotizar"
-      },
-      {
-        name: "Plan Premium",
-        details: [
-          "Creación y programación de contenido altamente personalizado y creativo para varias redes sociales (por ejemplo, Facebook, Instagram, Twitter, LinkedIn, YouTube).",
-          "Publicaciones frecuentes y estratégicas (5-7 publicaciones por semana en cada plataforma).",
-          "Monitoreo activo de la comunidad y gestión completa de comentarios y mensajes, incluyendo atención al cliente.",
-          "Desarrollo e implementación de campañas publicitarias pagadas en redes sociales.",
-          "Estrategias avanzadas de crecimiento de seguidores y compromiso.",
-          "Informes completos de análisis de rendimiento con recomendaciones estratégicas.",
-        ],
-        action: "cotizar"
-      }
-    ]
-  },
+    {
+      category: 'Gestion de redes sociales',
+      plans: [
+        {
+          name: "Plan Básico",
+          details: [
+            "Creación y programación de contenido básico para una red social (por ejemplo, Facebook, Instagram, Twitter).",
+            "Publicaciones regulares (2-3 publicaciones por semana).",
+            "Monitoreo de la comunidad y respuesta a comentarios básicos.",
+            "Informes básicos de rendimiento (número de seguidores, alcance, interacciones).",
+          ],
+          action: "cotizar"
+        },
+        {
+          name: "Plan Empresarial",
+          details: [
+            "Creación y programación de contenido diversificado para múltiples redes sociales (por ejemplo, Facebook, Instagram, Twitter, LinkedIn).",
+            "Publicaciones regulares (3-5 publicaciones por semana en cada plataforma).",
+            "Monitoreo proactivo de la comunidad y respuesta a comentarios y mensajes.",
+            "Creación de estrategias de contenido y calendarios editoriales.",
+            "Informes detallados de rendimiento (análisis de contenido, crecimiento de seguidores, alcance, interacciones).",
+          ],
+          action: "cotizar"
+        },
+        {
+          name: "Plan Premium",
+          details: [
+            "Creación y programación de contenido altamente personalizado y creativo para varias redes sociales (por ejemplo, Facebook, Instagram, Twitter, LinkedIn, YouTube).",
+            "Publicaciones frecuentes y estratégicas (5-7 publicaciones por semana en cada plataforma).",
+            "Monitoreo activo de la comunidad y gestión completa de comentarios y mensajes, incluyendo atención al cliente.",
+            "Desarrollo e implementación de campañas publicitarias pagadas en redes sociales.",
+            "Estrategias avanzadas de crecimiento de seguidores y compromiso.",
+            "Informes completos de análisis de rendimiento con recomendaciones estratégicas.",
+          ],
+          action: "cotizar"
+        }
+      ]
+    },
+    {
+      category: "Diseño multimedia",
+      plans: [
+        {
+          name: "Plan Básico",
+          details: [
+            "Creación de ilustraciones básicas para uso en redes sociales, blogs y presentaciones.",
+            "Entrega de archivos en formatos estándar (PNG, JPEG).",
+            "Dos revisiones incluidas.",
+            "Tiempo de entrega: 3-5 días hábiles.",
+            "Asistencia básica post-entrega."
+          ],
+          action: "cotizar"
+        },
+        {
+          name: "Plan Standard",
+          details: [
+            "Diseño corporativo completo, incluyendo logotipos, tarjetas de presentación y papelería.",
+            "Edición de video para contenido promocional, presentaciones y redes sociales.",
+            "Entrega de archivos en formatos estándar (AI, PDF para diseño gráfico; MP4 para video).",
+            "Hasta cinco revisiones incluidas.",
+            "Tiempo de entrega: 7-10 días hábiles.",
+            "Asistencia técnica post-entrega durante 1 mes."
+          ],
+          action: "cotizar"
+        },
+        {
+          name: "Plan Premium",
+          details: [
+            "Creación de motion graphics y animaciones de logotipos para contenido de alta calidad.",
+            "Desarrollo de animaciones personalizadas para presentaciones, videos corporativos y redes sociales.",
+            "Entrega de archivos en formatos estándar de video (MP4, MOV) y gráficos (GIF, APNG).",
+            "Revisiones ilimitadas hasta la satisfacción del cliente.",
+            "Tiempo de entrega: 10-15 días hábiles.",
+            "Asistencia técnica post-entrega durante 3 meses.",
+            "Consultoría para estrategias de marketing multimedia."
+          ],
+          action: "cotizar"
+        }
+      ]
+    },
+    
 ];
+
   export const navItems = [
     {
         id:'1',

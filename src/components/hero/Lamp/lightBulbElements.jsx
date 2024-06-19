@@ -3,26 +3,27 @@ import { variables } from "../../Styled-Components/themMode";
 import {mobile, tablet } from "../../Styled-Components/Responsive";
 export const Container = styled.section`
 width: 100%;
+height: 100%;
 ${mobile({
-  marginTop: '-85vh',
+  marginTop: '0',
 })}
 `
 export const GridContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  grid-gap: 10px;
+  grid-gap: 70px;
   grid-template-areas:
-    "left center right"
-    "left center right"
-    "left center right"
-    "left center right";
+    "left  right"
+    "left right"
+    "left  right"
+    "left  right";
   height: 100%;
   align-items: stretch;
   padding: 2rem 8rem;
 
   ${mobile({
-    gridTemplateAreas: "'center' 'left' 'right'",
+    gridTemplateAreas: "'left' 'right'",
     gridTemplateColumns: "1fr",
     padding: "2rem",
     textAlign: "center",
@@ -34,7 +35,7 @@ export const LeftColumn = styled.div`
   padding: 10px;
 `;
 
-export const CenterColumn = styled.div`
+/* export const CenterColumn = styled.div`
   grid-area: center;
   align-self: center;
   margin-bottom: 100px;
@@ -43,7 +44,7 @@ export const CenterColumn = styled.div`
       height: "200px",
     }
   )}
-`;
+`; */
 export const BulbLightContainer=styled.div`
 ${mobile({
   width: "100%",

@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import PreHome from '../components/welcomeComponent/index'
 import Hero from '../components/hero/index'
 import { scrollToTop } from '../components/Styled-Components/ScrollToTop'
+import Parallax from '../components/hero/Parallax';
 const Home = () => {
   useEffect(() => {
     scrollToTop();
   }, []);
   return (
     <>
-    <PreHome/>
+    <Parallax/>
     <Hero/>
     </>
   )

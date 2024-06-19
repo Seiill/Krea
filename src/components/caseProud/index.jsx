@@ -16,8 +16,6 @@ const CaseProud = () => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         setIsVisible(true);
-                    } else {
-                        setIsVisible(false);
                     }
                 });
             },
@@ -26,9 +24,15 @@ const CaseProud = () => {
             }
         );
 
-        observer.observe(ref.current);
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
 
-        return () => observer.disconnect();
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
     }, []);
 
     const handleButtonClick = () => {

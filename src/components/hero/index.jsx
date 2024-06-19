@@ -5,9 +5,11 @@ import Infography from '../inphography';
 import CaseProud from '../caseProud';
 import { variables } from '../Styled-Components/themMode';
 import { mobile, tablet } from '../Styled-Components/Responsive';
-import Lightbulb from './Lamp/lightbulb';
+/* import {Lightbulb} from './Lamp/Lightbulb' */
+import HeroPre from '../HeroContainer/HeroPre';
+import Parallax from './Parallax';
 
-const HeroContainer = styled.div`
+/* const HeroContainer = styled.div`
 position: relative;
 z-index: 1;
 top: ${({ $isVisible }) => ($isVisible ? '-100vh' : '0')};
@@ -21,16 +23,12 @@ opacity: ${({ $isVisible }) => ($isVisible ? 1 : 0)};
 transition: opacity 0.5s ease;
 margin-top: ${({ $isVisible }) => ($isVisible ? '0' : '-50vh')}; 
 ${mobile({ top: '0'})}
-`;
+`; */
 const Hero = () => {
   return (
-    <>
-    <HeroContainer $isVisible={true}>
-    <Lightbulb />
-  </HeroContainer>
+  <>
   <CaseProud />
   <Infography />
-  
   </>
   );
 }
