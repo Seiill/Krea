@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Lightbulb from './Lamp/Lightbulb';
+import Lightbulb from './Lamp/lightbulb';
 import PreHome from '../welcomeComponent/index'; 
 import useHandleScroll from '../Hooks/useHandleScroll'
 const Container = styled.div`
