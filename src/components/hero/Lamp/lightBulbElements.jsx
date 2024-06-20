@@ -35,16 +35,7 @@ export const LeftColumn = styled.div`
   padding: 10px;
 `;
 
-/* export const CenterColumn = styled.div`
-  grid-area: center;
-  align-self: center;
-  margin-bottom: 100px;
-  ${mobile(
-    {
-      height: "200px",
-    }
-  )}
-`; */
+
 export const BulbLightContainer=styled.div`
 ${mobile({
   width: "100%",

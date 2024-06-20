@@ -9,7 +9,7 @@ import {
   TitleHeader,
   Description,
   RightColumn
-} from './lightBulbElements';
+} from '../lightBulbElements';
 
 const Lightbulb = () => {
   const [isVisible, setIsVisible] = useState(false);
