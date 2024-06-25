@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-<<<<<<< HEAD
-=======
 import Lightbulb from './Lamp/lightbulb';
->>>>>>> 11aed4418dacc0c30ba0f613c2d3037170ad5030
 import PreHome from '../welcomeComponent/index'; 
 import useHandleScroll from '../Hooks/useHandleScroll'
 import HeroSell from './HeroSell';
