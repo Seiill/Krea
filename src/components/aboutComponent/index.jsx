@@ -9,7 +9,7 @@ import descPersonas1 from '../../assets/profiles-image1-01.png'
 import { valorData } from '../../data';
 import name from '../../assets/header-about.svg';
 import { Container, VideoContainer, TextContainer, Titles, SectionContainer, AboutUsProfile, PlatformSection, EstrategyContainer, Title, Image, ValorSection, ValorCard, Description, ImageContainer, TitleFirst, IconContainer} from './aboutElements';
-import Lightbulb from '../hero/Lamp/Lightbulb';
+import Lightbulb from '../hero/Lamp/lightbulb';
 
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);

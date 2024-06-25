@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 
 const useHandleScroll = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [zIndexLayer1, setZIndexLayer1] = useState(2); // Inicialmente el z-index del Layer1 es 2
+  const [zIndexLayer2, setZIndexLayer2] = useState(1); // Inicialmente el z-index del Layer2 es 1
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,11 @@ const useHandleScroll = () => {
           if (background) {
             background.style.backgroundColor = 'rgba(0, 0, 0, 0)'; 
           }
+
+          // Actualizar el z-index
+          setZIndexLayer1(1);
+          setZIndexLayer2(2);
+          setHasScrolled(true);
         } else {
           text.style.transform = 'translateX(0)';
           text.style.opacity = '1';
@@ -27,8 +34,13 @@ const useHandleScroll = () => {
           if (background) {
             background.style.backgroundColor = 'rgba(0, 0, 0, 1)'; 
           }
+
+          // Restaurar el z-index
+          setZIndexLayer1(2);
+          setZIndexLayer2(1);
+          setHasScrolled(false);
         }
-        setHasScrolled(true); 
+
         window.removeEventListener('scroll', handleScroll);        
       }
     };
@@ -40,7 +52,7 @@ const useHandleScroll = () => {
     };
   }, [hasScrolled]);
 
-  return hasScrolled;  
+  return { hasScrolled, zIndexLayer1, zIndexLayer2 };
 };
 
 export default useHandleScroll;

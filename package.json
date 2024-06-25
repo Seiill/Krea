@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-three/fiber": "^8.16.8",
     "axios": "^1.6.8",
     "framer-motion": "^11.0.14",
     "react": "^18.2.0",
@@ -19,7 +19,8 @@
     "react-hook-form": "^7.49.2",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.21.0",
-    "styled-components": "^6.1.1"
+    "styled-components": "^6.1.1",
+    "three": "^0.165.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
