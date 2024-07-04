@@ -501,7 +501,7 @@ export const offersData = [
     },
     {
         id:'4',
-        title:'Ver Ofertas',
+        title:'Ver Planes',
         path: "/offers"
     }
     
