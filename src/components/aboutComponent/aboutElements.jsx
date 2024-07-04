@@ -110,6 +110,7 @@ text-align: center;
 font-weight: ${variables.mediumBoldFont};
 padding: 1rem;
 text-wrap: balance;
+color: ${variables.primaryColor};
 `
 export const ImageContainer = styled.div`
 width: 50%;

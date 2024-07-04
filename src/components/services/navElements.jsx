@@ -18,24 +18,31 @@ import { mobile, tablet } from '../Styled-Components/Responsive';
   })}
 `;
 export const ButtonServices = styled.button`
-width: 23%;
+width: fit-content;
 height: 2.5rem;
+padding: 0.5rem 1rem;
 font-family: 'DINAlternate';
-  background-color: ${variables.bgColor};
+  background-color: ${variables.secondColor};
   border: none;
-  color: ${variables.primaryColor};
+  border-radius: 15px;
+  color: ${variables.bgColor};
   border-radius: 0 0 15px 15px;
   transition: all 0.3s;
 
   &:hover {
-    color: ${variables.secondColor};
+    color: ${variables.bgColor};
     font-weight: ${variables.mediumBoldFont};
     border: none;
     transform: scale(1.05);
    
   }
   ${mobile({
-    minWidth: "150px",
+    minWidth: "50px",
+    width: '23%',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    
   })}
 `;
 

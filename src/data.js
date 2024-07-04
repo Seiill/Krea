@@ -498,6 +498,11 @@ export const offersData = [
         id:'3',
         title:'Nosotros',
         path: "/aboutUs"
+    },
+    {
+        id:'4',
+        title:'Ver Ofertas',
+        path: "/offers"
     }
     
     

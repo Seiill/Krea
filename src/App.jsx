@@ -5,6 +5,7 @@ import Navbar from './components/navBar/NavBar';
 import { Main } from './components/Styled-Components/main';
 import Sidebar from './components/sideBar/SideBar';
 import WhatsappButton from './components/whatsapp';
+import OffersPlans from './pages/offers';
 
 const Footer =lazy(()=> import ('./components/footer/index'));
 const Home = lazy(() => import('./pages/home'));
@@ -34,6 +35,7 @@ function App() {
             <Route path='/contactUs' element={<ContactUs />} exact/>
             <Route path='/jedan-process-brand-construction' element={<Jedan/>} exact/>
             <Route path="/services/:category" element={<OfferPage />} />
+            <Route path="/offers" element={<OffersPlans />} />
           </Routes>
           <Footer />
           </Suspense>

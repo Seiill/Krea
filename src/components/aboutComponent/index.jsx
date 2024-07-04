@@ -49,6 +49,9 @@ const AboutUs = () => {
             <ImageContainer>
               <Image src={descPersonas} alt="Imagen CEO KREA" />
             </ImageContainer>
+            <Description style={{fontSize: '1.3rem',borderBottom: '2px solid #E44653',}}>
+            Estamos orgullosos de ser un gran equipo multidisciplinario, donde nuestros talentos excepcionales se unen para ofrecer soluciones efectivas y personalizadas a nuestros clientes. Nos apasiona superar desafíos y traer innovación a cada proyecto, asegurando resultados que hacen la diferencia.
+            </Description>
           </AboutUsProfile>
         </VideoContainer>
       </motion.div>
