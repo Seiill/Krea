@@ -61,6 +61,13 @@ const Logo = styled.div`
     animation: ${fadeIn} 1s forwards;
    
   }
+    ${tablet({
+
+    })}
+    ${mobile({
+      top: '-842px',
+      left:'71px',
+    })}
 `;
 const Description = styled.p`
 text-wrap: balance;
@@ -112,28 +119,41 @@ display: flex;
 width: 100%;
 overflow: hidden;
 max-height: 90vh;
-
-
-  }
 ${tablet(
   {maxHeight: '52vh',}
-)}
+)};
+${mobile({
+  height: '50vh',
+ })}:
 `
 const Item = styled.div`
- position: relative;
+  position: relative;
   width: fit-content;
   z-index: ${({ $zIndex }) => $zIndex};
   top: ${({ $pTop }) => $pTop};
   bottom: ${({ $pBottom }) => $pBottom};
   left: ${({ $pLeft }) => $pLeft};
   right: ${({ $pRight }) => $pRight};
-  animation: ${({ $duration }) =>css`${getWiggleAnimation()} ${$duration} cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite`};
+  animation: ${({ $duration }) => css`${getWiggleAnimation()} ${$duration} cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite`};
   ${({ $hoverDirection }) => $hoverDirection && css`
-  .container:hover & {
-    animation: ${getHoverAnimation($hoverDirection)} 1s forwards;
-  }
-`}
-`
+    .container:hover & {
+      animation: ${getHoverAnimation($hoverDirection)} 1s forwards;
+    }
+  `};
+  ${mobile`
+    top: ${({ $mobileTop }) => $mobileTop || $pTop};
+    bottom: ${({ $mobileBottom }) => $mobileBottom || $pBottom};
+    left: ${({ $mobileLeft }) => $mobileLeft || $pLeft};
+    right: ${({ $mobileRight }) => $mobileRight || $pRight};
+  `}
+  ${tablet`
+    top: ${({ $tabletTop }) => $tabletTop || $pTop};
+    bottom: ${({ $tabletBottom }) => $tabletBottom || $pBottom};
+    left: ${({ $tabletLeft }) => $tabletLeft || $pLeft};
+    right: ${({ $tabletRight }) => $tabletRight || $pRight};
+  `}
+`;
+
 const Image = styled.img`   
 object-fit: cover;
 width: ${props => props.width || '45%'};
@@ -164,13 +184,12 @@ const HeroSell = () => {
         </Item >
         
         
-        <Item $duration={duration} $zIndex='10' $pTop='700px' $pLeft='60px' $hoverDirection='top-left'>
-  <Image src={Icon3} alt="" />
-</Item>
-
-<Item $duration={duration} $zIndex='5' $pTop='100px' $pRight='40px' $hoverDirection='bottom-right'>
-  <Image src={Icon4} alt="" />
-</Item>
+        <Item $duration={duration} $zIndex='10' $pTop='700px' $mobileTop='500px' $mobileLeft='102px' $pLeft='60px' $hoverDirection='top-left'>
+            <Image src={Icon3} alt="" />
+          </Item>
+          <Item $duration={duration} $zIndex='5' $mobileTop='274px' $mobileRight='121px' $pTop='100px' $pRight='40px' $hoverDirection='bottom-right'>
+            <Image src={Icon4} alt="" />
+          </Item>
 
 <Item $duration={duration} $pBottom='0px' $pLeft='50px' $zIndex='7' $hoverDirection='left'>
   <Image width='60%' src={Icon5} alt="" />
