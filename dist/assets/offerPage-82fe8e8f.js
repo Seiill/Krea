@@ -1,4 +1,4 @@
-import{p as o,v as t,e as d,u as p,o as m,j as e}from"./index-1ae8889f.js";const x=o.div`
+import{p as o,v as t,e as d,u as p,o as m,j as e}from"./index-9cf82e43.js";const x=o.div`
 width: 100%;
 height:  5rem;
 background-color: ${({index:r})=>r%2===0?t.primaryColor:t.secondColor};

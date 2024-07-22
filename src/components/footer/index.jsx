@@ -23,13 +23,13 @@ const Footer = () => {
           <p>No solo hacemos una<br/> marca bonita,<br/>¡la hacemos visible!</p>
         </LogoContainer> 
         <SocialMedia>
-          <StyledLink to="https://facebook.com" target="_blank">Facebook</StyledLink>
-          <StyledLink to="https://linkedin.com" target="_blank">LinkedIn</StyledLink>
+          <StyledLink to="https://www.facebook.com/profile.php?id=61562504063913" target="_blank">Facebook</StyledLink>
+          <StyledLink to="https://www.linkedin.com/in/katherine-camargo-9a57ba318/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">LinkedIn</StyledLink>
           <StyledLink to="https://instagram.com" target="_blank">Instagram</StyledLink>
         </SocialMedia>
         <ContactInfo>
-          <p>Teléfono: +1 123-456-789</p>
-          <p>Correo: ejemplo@kreemos.com</p>
+          <a href='tel:+13213337270'>Teléfono: +1 (321) 333-7270</a>
+          <a href='mailto:Kreadigitalgraphic@gmail.com'>Kreadigitalgraphic@gmail.com</a>
         </ContactInfo>
       </SocialContainer>
     </FooterContainer>
