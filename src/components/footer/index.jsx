@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from '../../assets/logo.svg';
 import { useNavigate } from 'react-router-dom';
-import { FooterContainer,StyledLink,  Title, TitleContainer, LogoContainer, Logo, SocialContainer, SocialMedia, ContactInfo, KreemosButton } from './footerElements';
+import { FooterContainer,StyledLink,  Title, TitleContainer, LogoContainer, Logo, SocialContainer, SocialMedia, ContactInfo, KreemosButton, SocialLink } from './footerElements';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -28,8 +28,8 @@ const Footer = () => {
           <StyledLink to="https://instagram.com" target="_blank">Instagram</StyledLink>
         </SocialMedia>
         <ContactInfo>
-          <a href='tel:+13213337270'>Teléfono: +1 (321) 333-7270</a>
-          <a href='mailto:Kreadigitalgraphic@gmail.com'>Kreadigitalgraphic@gmail.com</a>
+          <SocialLink href='tel:+13213337270'>Teléfono: +1 (321) 333-7270</SocialLink>
+          <SocialLink href='mailto:Kreadigitalgraphic@gmail.com'>Kreadigitalgraphic@gmail.com</SocialLink>
         </ContactInfo>
       </SocialContainer>
     </FooterContainer>
