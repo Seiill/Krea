@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:dist/assets/jedan-process-brand-construction-dea19f2e.js
-import{p as t,v as c,j as e,r as p}from"./index-c8120dc3.js";import{t as n,m as r}from"./Responsive-56429a13.js";import{j as h}from"./mockup-two-jedan-80-4595cab1.js";import{s as g}from"./ScrollToTop-e4b609f8.js";const m=t.div`
-========
-import{p as t,v as c,j as e,r as p}from"./index-9cf82e43.js";import{t as n,m as r}from"./Responsive-a2a8a111.js";import{j as h}from"./mockup-two-jedan-80-4595cab1.js";import{s as g}from"./ScrollToTop-e4b609f8.js";const m=t.div`
->>>>>>>> 96c24cbf6b0a06543ad105ff79465ec58c5e7c66:dist/assets/jedan-process-brand-construction-b62fa6e3.js
+import{p as t,v as c,j as e,r as p}from"./index-98e50ebb.js";import{t as n,m as r}from"./Responsive-7f92e7c6.js";import{j as h}from"./mockup-two-jedan-80-4595cab1.js";import{s as g}from"./ScrollToTop-e4b609f8.js";const m=t.div`
   width: 100%;
   overflow: hidden;
   max-width: 1280px;

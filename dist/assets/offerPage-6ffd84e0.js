@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:dist/assets/offerPage-49cd244e.js
-import{p as o,v as t,e as d,u as p,o as m,j as e}from"./index-c8120dc3.js";const x=o.div`
-========
-import{p as o,v as t,e as d,u as p,o as m,j as e}from"./index-9cf82e43.js";const x=o.div`
->>>>>>>> 96c24cbf6b0a06543ad105ff79465ec58c5e7c66:dist/assets/offerPage-82fe8e8f.js
+import{p as o,v as t,e as d,u as p,o as m,j as e}from"./index-98e50ebb.js";const x=o.div`
 width: 100%;
 height:  5rem;
 background-color: ${({index:r})=>r%2===0?t.primaryColor:t.secondColor};
