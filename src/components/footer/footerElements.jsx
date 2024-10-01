@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { variables } from '../Styled-Components/themMode';
 import {mobile, tablet } from '../Styled-Components/Responsive';
-import { GrTextAlignCenter } from 'react-icons/gr';
+
 
 export const StyledLink =styled(Link)`
 color: ${variables.bgColor};
@@ -89,3 +89,11 @@ flex-direction: column;
 justify-content:  flex-end;
 align-items: flex-start;
 `;
+
+export const SocialLink = styled.a`
+font-size:${variables.smallFont};
+font-weight:${variables.mediumBoldFont};
+color:${variables.bgColor};
+text-decoration: none;
+padding: 1rem 0;
+`
