@@ -1,4 +1,4 @@
-import{p as t,v as c,j as e,r as p}from"./index-1ae8889f.js";import{t as n,m as r}from"./Responsive-64219d17.js";import{j as h}from"./mockup-two-jedan-80-4595cab1.js";import{s as g}from"./ScrollToTop-e4b609f8.js";const m=t.div`
+import{p as t,v as c,j as e,r as p}from"./index-c8120dc3.js";import{t as n,m as r}from"./Responsive-56429a13.js";import{j as h}from"./mockup-two-jedan-80-4595cab1.js";import{s as g}from"./ScrollToTop-e4b609f8.js";const m=t.div`
   width: 100%;
   overflow: hidden;
   max-width: 1280px;
